@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: -webkit-fill-available;
+    line-height: 1.5;
+}
+
+.chooseStyle-page {
+    background-color: #395b64;
+    background-image: url("/images/man-holding-barbell.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+.box-chooseStyle {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.body-chooseStyle {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 10%;
+}
+
+.footer-chooseStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chooseStyle-page .chooseStyle-button {
+    background-color: #f5989d;
+    color: black;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    padding: 10px 110px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.body-chooseStyle button {
+    width: 15em;
+    border-radius: 8px;
+    border: 1px solid white;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 9px 2px;
+    cursor: pointer;
+    background-color: transparent;
+    letter-spacing: 4px;
+}
+
+.body-chooseStyle h1 {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    padding-bottom: 30px;
+}

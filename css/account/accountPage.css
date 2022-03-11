@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: -webkit-fill-available;
+    line-height: 1.5;
+}
+
+/* Navigation Bar */
+svg.menu {
+    width: 30px;
+    height: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+svg.close {
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+nav {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    height: 50vh;
+    width: 50vw;
+    border-radius: 8px;
+    background: #f5989d;
+    box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    text-transform: uppercase;
+    transform: translateX(-150%);
+    transition: transform 0.5s ease-in-out;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 1.5em;
+    display: block;
+}
+
+a:hover {
+    background: rgb(235, 235, 235);
+    color: black;
+}
+
+.open-nav {
+    transform: translateX(0%);
+}
+/* End of Navigation Bar */
+
+.account-page {
+    background-color: #395b64;
+}
+
+.box-account {
+    height: 80vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.top-account {
+    color: white;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.middle-account {
+    color: white;
+    line-height: 40px;
+    border: 1px solid #f5989d;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 0 20px;
+}
+
+.info-columns-2 {
+    text-align: end;
+}
+
+.bottom-account {
+    color: white;
+    border: 1px solid #f5989d;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    margin: 0 20px;
+}
+
+.cropped1 {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #f5989d;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}

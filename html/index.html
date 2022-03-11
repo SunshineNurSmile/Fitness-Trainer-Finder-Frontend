@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/index.css" />
+    </head>
+
+    <body>
+        <div class="landing-page" id="app">
+            <div class="box">
+                <!-- welcome message -->
+                <div class="body">
+                    <h1>The perfect</h1>
+                    <h1>app for your</h1>
+                    <h1>workout</h1>
+                </div>
+                <!-- button -->
+                    <div class="footer" @click="jump_to_detail()">
+                        <button class="ST_button">Start Training</button>
+                    </div>
+                    <div class="footer" @click="jump_to_login()">
+                        <button class="LI_button">Log In</button>
+                    </div>
+                    
+            </div>
+        </div>
+
+        <footer></footer>
+        
+        <script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    
+                },
+                mounted: function() {},
+                methods:{
+                    jump_to_detail() {
+						window.location.href = "/html/loginsignup/signup.html";
+					},
+
+                    jump_to_login() {
+						window.location.href = "/html/loginsignup/login.html";
+					}      
+                }
+            })
+        </script>
+    </body>
+</html>

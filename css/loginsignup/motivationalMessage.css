@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: -webkit-fill-available;
+    line-height: 1.5;
+}
+
+.motivational-page{
+    background: linear-gradient(#90b4c0 70%, #395b64 70%);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-top {
+    height: 70vh;
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-bottom {
+    margin: 0 20px;
+    height: 15vh;
+}
+
+.body-motivation h1{
+    color: white;
+    text-decoration: underline;
+    transform: scale(1, 1.2);
+    padding: 18px;
+}
+
+.footer-motivation h2{
+    color: white;
+    padding-top: 20px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Details Page</title>
+        <link rel="stylesheet" href="/css/loginsignup/details.css" />
+    </head>
+
+    <body class="details-page">
+        <div class="box-details" id="app">
+            <div class="body-details">
+                <h1>Your details</h1>
+                <div>
+                    <button class="gender-button" @click="choose_man()">Male</button>
+                    <button class="gender-button" @click="choose_woman()">Female</button>
+                </div>
+
+                <form>
+                    <div class="input">
+                        <input type="number" id="weight" v-model="weight" class="input-field" placeholder="Weight (lbs)" required />
+                    </div>
+
+                    <div class="input">
+                        <input type="number" id="height" v-model="height" class="input-field" placeholder="Height (inches)" required />
+                    </div>
+
+                    <div class="input">
+                        <input type="date" id="birthday" v-model="dob" class="input-field" required />
+                    </div>
+                </form>
+            </div>
+                <div class="footer-details" @click="jump_to_AT()">
+                    <button class="action-button">Continue</button>
+                </div>
+        </div>
+
+        <footer></footer>
+
+        <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/jquery.js" charset="utf-8"></script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    gender: '',
+                    weight: '',
+                    height: '',
+                    dob: ''
+                },
+                mounted: function() {},
+                methods: {
+                    choose_man(){
+                        this.gender = 'male';
+                    },
+                    choose_woman(){
+                        this.gender = 'female';
+                    },
+                    jump_to_AT(){
+                        if (this.gender == ''||this.weight == ''||this.height == ''||this.dob == '') {
+							alert("The information cannot be empty");
+                            window.location.reload();
+                        }
+                        else{
+                            var datas = {};
+                            datas.gender = this.gender;
+                            datas.weight = this.weight;
+                            datas.height = this.height;
+                            datas.dob = this.dob;
+                            window.localStorage.user_profile = JSON.stringify(datas);
+                            window.location.href = "/html/loginsignup/adultTrainingStyle.html";
+                        }
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Senior Training Style</title>
+        <link rel="stylesheet" href="/css/loginsignup/chooseStyle.css" />
+    </head>
+    
+    <body class="chooseStyle-page">
+        <div class="box-chooseStyle" id="app">
+            <div class="body-chooseStyle">
+                <h1>Choose a training style</h1>
+                <div>
+                    <button @click="YG_type()">Yoga</button>
+                </div>
+
+                <div>
+                    <button @click="PL_type()">Pilates</button>
+                </div>
+
+                <div>
+                    <button @click="BW_type()">Bodyweight</button>
+                </div>
+            </div>
+
+            <div class="footer-chooseStyle" @click="jump_to_MM()">
+                <button class="chooseStyle-button">Continue</button>
+            </div>
+        </div>
+
+        <footer></footer>
+        
+        <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/jquery.js" charset="utf-8"></script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    Senior_type: ''
+                },
+                created: function() {
+					
+				},
+                mounted: function() {},
+                methods: {
+                    YG_type(){
+                        this.Senior_type= 'Yoga';
+                    },
+                    PL_type(){
+                        this.Senior_type= 'Pilates';
+                    },
+                    BW_type(){
+                        this.Senior_type= 'Bodyweight';
+                    },
+                    jump_to_MM(){
+                        if (this.Senior_type == '') {
+							alert("Please select a type!");
+                            window.location.reload();
+                        }
+                        else{
+                            var datas = JSON.parse(localStorage.user_profile);
+                            // datas.Senior_type = this.Senior_type;
+                            $.ajax({
+                                headers: {
+                                    Authorization: "Bearer " + localStorage.getItem("token")
+                                },
+                                url: "http://127.0.0.1:8000/api/users/profile/create",
+                                type: "POST",
+                                dataType: "json",
+                                data: datas,
+                                contentType: "application/json",
+                                success: function(rs) {
+                                    //window.location.href = '/html/loginsignup/motivationalMessage.html';
+                                },
+                                error: function(xhr, status, error){
+                                    var errorMessage = xhr.status + ': ' + xhr.statusText
+                                    alert('Error - ' + errorMessage);
+                                }
+                            });
+                        }
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
