@@ -16,14 +16,14 @@ body {
 }
 
 /* Navigation Bar */
-svg.menu {
+.menu {
     width: 30px;
     height: 30px;
     margin-top: 30px;
     margin-left: 30px;
 }
 
-svg.close {
+.close {
     width: 30px;
     height: 30px;
     margin-top: 20px;

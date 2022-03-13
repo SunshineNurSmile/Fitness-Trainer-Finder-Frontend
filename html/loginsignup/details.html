@@ -13,8 +13,8 @@
             <div class="body-details">
                 <h1>Your details</h1>
                 <div>
-                    <button class="gender-button" @click="choose_man()">Male</button>
-                    <button class="gender-button" @click="choose_woman()">Female</button>
+                    <button class="gender-button" @click="gender = 'Male' ">Male</button>
+                    <button class="gender-button" @click="gender = 'Female' ">Female</button>
                 </div>
 
                 <form>
@@ -39,41 +39,7 @@
         <footer></footer>
 
         <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
-        <script src="/js/jquery.js" charset="utf-8"></script>
-        <script>
-            var app = new Vue({
-                el: '#app',
-                data: {
-                    gender: '',
-                    weight: '',
-                    height: '',
-                    dob: ''
-                },
-                mounted: function() {},
-                methods: {
-                    choose_man(){
-                        this.gender = 'male';
-                    },
-                    choose_woman(){
-                        this.gender = 'female';
-                    },
-                    jump_to_AT(){
-                        if (this.gender == ''||this.weight == ''||this.height == ''||this.dob == '') {
-							alert("The information cannot be empty");
-                            window.location.reload();
-                        }
-                        else{
-                            var datas = {};
-                            datas.gender = this.gender;
-                            datas.weight = this.weight;
-                            datas.height = this.height;
-                            datas.dob = this.dob;
-                            window.localStorage.user_profile = JSON.stringify(datas);
-                            window.location.href = "/html/loginsignup/adultTrainingStyle.html";
-                        }
-                    }
-                }
-            })
-        </script>
+        <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/loginsignup/details.js" type="text/javascript" charset="utf-8"></script>
     </body>
 </html>

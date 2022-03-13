@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/account/accountPage.css" />
+        <title>Edit Profile</title>
+    </head>
+
+    <body class="edit-profile">
+        <div class="outer-div" id="app" style="background-color: blue;">
+            <div class="img-upload">
+                <label for="img">Upload your profile picture:</label>
+            </div>
+
+            <div class="imgpreview">
+                <img :src="image" @click="setImg">
+            </div>
+
+            <div>
+                <input type="file" name="img" accept="image/*" style="display:none" @change="upload($event)" ref="imgInput">
+            </div>
+
+            <div class="footer-buttons" @click="submit_cancel()">
+                <button @click="submitcancel = 'Submit' ">Submit</button>
+                <button @click="submitcancel = 'Cancel' ">Cancel</button>
+            </div>
+        </div>
+
+        <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    submitcancel: '',
+                    file:'',
+                    image: '/profilepictures/defaultProfile.svg',
+                },
+                methods: {
+                    setImg() {
+                        this.$refs.imgInput.click();
+                    },
+                    upload(image) {
+                        console.log(image.target.files[0]);
+                        let img = image.target.files[0];
+                        let data = new FormData();
+                        data.append('file', img);
+                        console.log(data);
+                        console.log(data.get('file'));
+                        var reader = new FileReader();
+                        var this_ = this
+                        reader.readAsDataURL(img);
+                        reader.onload = function(image) {
+                            this_.image = this.result;
+                        }
+                    },
+                    submit_cancel(){
+
+                    },
+                }
+            })
+        </script>
+    </body>
+</html>

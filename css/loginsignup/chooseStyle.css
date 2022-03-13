@@ -61,7 +61,8 @@ body {
 }
 
 .body-chooseStyle button {
-    width: 15em;
+    width: 42vw;
+    height: 8vh;
     border-radius: 8px;
     border: 1px solid white;
     color: white;
@@ -73,7 +74,7 @@ body {
     margin: 9px 2px;
     cursor: pointer;
     background-color: transparent;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
 }
 
 .body-chooseStyle h1 {
