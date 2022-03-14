@@ -4,62 +4,213 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/css/account/accountPage.css" />
+        <link rel="stylesheet" href="/css/account/editProfile.css" />
         <title>Edit Profile</title>
     </head>
 
     <body class="edit-profile">
         <div class="outer-div" id="app" style="background-color: blue;">
-            <div class="img-upload">
-                <label for="img">Upload your profile picture:</label>
-            </div>
-
             <div class="imgpreview">
-                <img :src="image" @click="setImg">
+                <img :src="image" @click="$refs.imgInput.click()">
             </div>
 
             <div>
                 <input type="file" name="img" accept="image/*" style="display:none" @change="upload($event)" ref="imgInput">
             </div>
 
-            <div class="footer-buttons" @click="submit_cancel()">
-                <button @click="submitcancel = 'Submit' ">Submit</button>
-                <button @click="submitcancel = 'Cancel' ">Cancel</button>
+            <div class="edit">
+                <div class="dropdown">
+                    <select class="style_selection" name="styles" id="styles">
+                        <option value="" selected disabled hidden>Select Training Style</option>
+                        <option value="Yoga">Yoga</option>
+                        <option value="Pilates">Pilates</option>
+                        <option value="Bodybuilding">Body Building</option>
+                        <option value="Bodyweight">Body Weight</option>
+                        <option value="Powerlifting">Power Lifting</option>
+                        <option value="Olympiclifting">Olympic Lifting</option>
+                    </select>
+                </div>
+
+                <div class="dropdown">
+                    <select class="gender_selection" name="gender" id="gender">
+                        <option value="" selected disabled hidden>Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <div class="textinput">
+                    <input type="number" id="height" v-model="height" class="text-input" :placeholder="height_display"/>
+                </div>
+
+                <div class="textinput">
+                    <input type="number" id="weight" v-model="weight" class="text-input" :placeholder="weight_display"/>
+                </div>
+
+                <div class="textinput">
+                    <input type="text" id="description" v-model="description" class="text-input" :placeholder="description_display"/>
+                </div>
+            </div>
+
+            <div class="footer-buttons">
+                <button @click="submit()">Submit</button>
+                <button @click="cancel()">Cancel</button>
             </div>
         </div>
 
         <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
         <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
         <script>
+            var this_;
             var app = new Vue({
                 el: '#app',
                 data: {
-                    submitcancel: '',
+                    id: '',
+                    height: '',
+                    heightInt: '',
+                    height_display: '',
+                    weight: '',
+                    weightInt: '',
+                    weight_display: '',
+                    description: '',
+                    description_display: 'Edit Your Description Here',
+                    training_style: '',
+                    style_display: '',
+                    gender: '',
+                    gender_display: '',
+
+                    // for image upload
                     file:'',
                     image: '/profilepictures/defaultProfile.svg',
                 },
+                
+                created: function() {
+                    this_ = this;
+                    this_.initPerMsg();
+                },
+
                 methods: {
-                    setImg() {
-                        this.$refs.imgInput.click();
-                    },
                     upload(image) {
-                        console.log(image.target.files[0]);
                         let img = image.target.files[0];
-                        let data = new FormData();
-                        data.append('file', img);
-                        console.log(data);
-                        console.log(data.get('file'));
+                        let picture = new FormData();
+                        picture.append('file', img);
                         var reader = new FileReader();
                         var this_ = this
                         reader.readAsDataURL(img);
                         reader.onload = function(image) {
                             this_.image = this.result;
                         }
-                    },
-                    submit_cancel(){
 
+                        $.ajax({
+                            headers: {
+                                Authorization: "Bearer " + localStorage.getItem("token")
+                            },
+                            url: "http://127.0.0.1:8000/api/users/profile/update",
+                            type: "PATCH",
+                            data: picture,
+                            processData: false,
+                            contentType: false,
+
+                            success: function(rs) {
+                                if (rs != null) {
+                                    alert("upload successful");
+                                }
+                            }
+                        })
                     },
-                }
+
+                    initPerMsg() {
+                        $.ajax({
+                            headers: {
+                                Authorization: "Bearer " + localStorage.getItem("token")
+                            },
+                            url: "http://127.0.0.1:8000/api/users/profile/",
+                            type: "GET",
+                            
+                            success: function(rs) {
+                                if (rs != null) {
+                                    this_.id = rs._id;
+                                    this_.heightInt = rs.user_profile.height;
+                                    this_.weightInt = rs.user_profile.weight;
+                                    this_.height_display = "Height: " + this_.heightInt + "inch";
+                                    this_.weight_display = "Weight: " + this_.weightInt + "LB";
+                                    this_.style_display = rs.user_profile.training_style;
+                                    this_.gender_display = rs.user_profile.gender;
+                                    if (rs.user_profile.description != null) {
+                                        this_.description_display = rs.user_profile.description;
+                                    }
+                                }
+                            }
+                        })
+                    },
+
+                    submit() {
+                        var datas = {};
+                        this.gender = $('#gender :selected').val();
+                        this.training_style = $('#styles :selected').val();
+                        
+                        if (this.height != '') {
+                            datas.height = this.height;
+                        }
+                        else {
+                            datas.height = this.heightInt;
+                        }
+
+                        if (this.weight != '') {
+                            datas.weight = this.weight;
+                        }
+                        else {
+                            datas.weight = this.weightInt;
+                        }
+
+                        if (this.description != '') {
+                            datas.description = this.description;
+                        }
+                        else {
+                            datas.description = this.description_display;
+                        }
+
+                        if (this.gender != '') {
+                            datas.gender = this.gender;
+                        }
+                        else {
+                            datas.gender = this.gender_display;
+                        }
+
+                        if (this.training_style != '') {
+                            datas.training_style = this.training_style;
+                        }
+                        else {
+                            datas.training_style = '';
+                        }
+
+                        var data = JSON.stringify(datas);
+                        console.log(data);
+                        
+                        $.ajax({
+                            headers: {
+                                Authorization: "Bearer " + localStorage.getItem("token")
+                            },
+                            url: "http://127.0.0.1:8000/api/users/profile/update/" + this.id + "/",
+                            type: "PUT",
+                            data: data,
+                            dataType: "json",
+                            contentType: "application/json",
+
+                            success: function(rs) {
+                                alert("Information Modified.")
+                                window.location.href = "/html/account/accountPage.html";
+                            },
+
+                            error: function(rs) {
+                                alert("Something Went Wrong.")
+                            }
+                        })
+                    },
+                    cancel() {
+                        window.location.href = "/html/account/accountPage.html";
+                    }
+                },
             })
         </script>
     </body>
