@@ -11,9 +11,10 @@ var app = new Vue({
                 return;
             }
             else {
-                var datas = JSON.parse(localStorage.user_profile);
+                var datas = JSON.parse(localStorage.trainee);
                 datas.training_style = this.training_style;
-                window.localStorage.user_profile = JSON.stringify(datas);
+                //window.localStorage.trainee = JSON.stringify(datas);
+                var data = JSON.stringify(datas);
             }
 
             $.ajax({
@@ -23,7 +24,7 @@ var app = new Vue({
                 url: "http://127.0.0.1:8000/api/users/trainees/create",
                 type: "POST",
                 dataType: "json",
-                data: localStorage.user_profile,
+                data: data,
                 contentType: "application/json",
                 success: function(rs) {
                     window.location.href = '/html/loginsignup/motivationalMessage.html';

@@ -2,26 +2,14 @@ var this_;
 var app = new Vue({
     el: '#app',
     data: {
-        // Input information
         id: '',
-        height: '',
         heightft: '',
         heightin: '',
         weight: '',
         description: '',
         training_style: '',
         gender: '',
-
-        // Display Information
-        heightft_display: '',
-        heightin_display: '',
-        weight_display: '',
-        style_display: '',
-        gender_display: '',
-        description_display: 'Edit Your Description Here',
-
-        // Image Information
-        avatar: '/images/defaultProfile.png',
+        avatar: '',
     },
     
     created: function() {
@@ -41,18 +29,23 @@ var app = new Vue({
                 success: function(rs) {
                     if (rs != null) {
                         this_.id = rs.id;
-                        this_.height = rs.trainee.height;
-                        this_.heightft_display = "Height(FT): " + this_.height.substring(0, 2);
-                        this_.heightin_display = "Height(IN): " + this_.height.substring(2);
-                        this_.weight_display = "Weight: " + rs.trainee.weight;
-                        this_.style_display = rs.trainee.training_style;
-                        this_.gender_display = rs.trainee.gender;
+                        this_.heightft = rs.trainee.heightft;
+                        this_.heightin = rs.trainee.heightin;
+                        this_.weight = rs.trainee.weight;
+                        this_.training_style = rs.trainee.training_style;
+                        this_.gender = rs.trainee.gender;
                         if (rs.trainee.description != null) {
-                            this_.description_display = rs.trainee.description;
+                            this_.description = rs.trainee.description;
+                        }
+                        else {
+                            this_.description = "Please edit your description here!";
                         }
 
                         if (rs.trainee.avatar != null) {
                             this_.avatar = rs.trainee.avatar;
+                        }
+                        else {
+                            this_.avatar = "/images/defaultProfile.png";
                         }
                     }
                 }
@@ -72,52 +65,14 @@ var app = new Vue({
 
         submit() {
             var datas = {};
+            datas.heightft = this.heightft;
+            datas.heightin = this.heightin;
+            datas.weight = this.weight;
+            datas.description = this.description;
+            datas.training_style = this.training_style;
+            datas.gender = this.gender;
             datas.avatar = this.avatar;
             
-            if (this.heightft != '' && this.heightin != '') {
-                datas.height = this.heightft + "\'" + this.heightin + "\"";
-            }
-            else {
-                if (this.heightft == '' && this.heightin != '') {
-                    datas.height = 0 + "\'" + this.heightin + "\"";
-                }
-                else if (this.heightin == '' && this.heightft != '') {
-                    datas.height = this.heightft + "\'" + 0 + "\"";
-                }
-                else {
-                    datas.height = this.height;
-                }
-            }
-
-            if (this.weight != '') {
-                datas.weight = this.weight + "LB";
-            }
-            else {
-                var weightstr = this.weight_display
-                datas.weight = weightstr.substring(9);
-            }
-
-            if (this.description != '') {
-                datas.description = this.description;
-            }
-            else {
-                datas.description = this.description_display;
-            }
-
-            if (this.gender != '') {
-                datas.gender = this.gender;
-            }
-            else {
-                datas.gender = this.gender_display;
-            }
-
-            if (this.training_style != '') {
-                datas.training_style = this.training_style;
-            }
-            else {
-                datas.training_style = this.style_display;
-            }
-
             var data = JSON.stringify(datas);
             console.log(data);
             

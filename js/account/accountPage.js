@@ -27,8 +27,8 @@ var app = new Vue({
                     if (rs != null) {
                         this_.name = rs.name;
                         this_.gender = rs.trainee.gender;
-                        this_.weight = rs.trainee.weight;
-                        this_.height = rs.trainee.height;
+                        this_.weight = rs.trainee.weight + "LB";
+                        this_.height = rs.trainee.heightft + "\'" + rs.trainee.heightin + "\"";
 
                         // Get Description
                         if (rs.trainee.description != null) {

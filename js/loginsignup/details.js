@@ -17,10 +17,11 @@ var app = new Vue({
             else{
                 var datas = {};
                 datas.gender = this.gender;
-                datas.weight = this.weight + "LB";
-                datas.height = this.heightft + "\'" + this.heightin + "\"";
+                datas.weight = this.weight;
+                datas.heightft = this.heightft;
+                datas.heightin = this.heightin;
                 datas.dob = this.dob;
-                window.localStorage.user_profile = JSON.stringify(datas);
+                window.localStorage.trainee = JSON.stringify(datas);
                 window.location.href = "/html/loginsignup/chooseStyle.html";
             }
         }
