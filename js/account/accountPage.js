@@ -8,7 +8,7 @@ var app = new Vue({
         height: '',
         weight: '',
         description: 'Please edit your description in the Edit Profile page using the menu button.',
-        img: '/profilepictures/defaultProfile.svg'
+        avatar: '',
     },
     created: function() {
         this_ = this;
@@ -20,32 +20,31 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: "http://127.0.0.1:8000/api/users/profile/",
+                url: "http://127.0.0.1:8000/api/users/trainees/",
                 type: "GET",
                 
                 success: function(rs) {
                     if (rs != null) {
                         this_.name = rs.name;
-                        this_.gender = rs.user_profile.gender;
-                        this_.weight = rs.user_profile.weight + "LB";
-                        
-                        // Get Height
-                        var feet = Math.floor(rs.user_profile.height / 12);
-                        var inch = rs.user_profile.height % 12;
-                        this_.height = feet + "\'" + inch + "\"";
+                        this_.gender = rs.trainee.gender;
+                        this_.weight = rs.trainee.weight;
+                        this_.height = rs.trainee.height;
 
                         // Get Description
-                        if (rs.user_profile.description != null) {
-                            this_.description = rs.user_profile.description;
+                        if (rs.trainee.description != null) {
+                            this_.description = rs.trainee.description;
                         }
 
                         // Get Profile Image
-                        if (rs.user_profile.picture != null) {
-                            this_.img = rs.user_profile.picture;
+                        if (rs.trainee.avatar != null) {
+                            this_.avatar = rs.trainee.avatar;
+                        }
+                        else {
+                            this_.avatar = "/images/defaultProfile.png";
                         }
 
                         // Get Age
-                        var dob = rs.user_profile.dob;
+                        var dob = rs.trainee.dob;
                         var today = new Date();
                         var yearDiff = today.getFullYear() - parseInt(dob.substring(0,4));
                         var monthDiff = today.getMonth() - parseInt(dob.substring(5, 7)) + 1;

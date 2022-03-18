@@ -9,24 +9,34 @@
         <title>Acount Page</title>
     </head>
 
-    <nav>
-        <img class="close" src="/images/close-button.svg" alt="close-button"/>
-
-        <ul>
-            <li><a href="/html/home/homepage.html">Home Page</a></li>
-            <li><a href="/html/account/editProfile.html">Edit Profile</a></li>
-            <li><a href="#">Your Trainer</a></li>
-            <li><a href="#">Payments</a></li>
-        </ul>
-    </nav>
-
-    <img class = "menu" src="/images/menu-button.svg" alt="menu-button"/>
-
     <body class="account-page">
         <div class="about" id="app">
+            <div class="navdiv">
+                <img class = "menu" src="/images/menu-button.svg" alt="menu-button"/>
+    
+                <nav>
+                    <img class="close" src="/images/close-button.svg" alt="close-button"/>
+            
+                    <ul class="navul">
+                        <li class="navli">
+                            <a class="nava" href="/html/home/homepage.html">Home Page</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="/html/account/editProfile.html">Edit Profile</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="#">Your Trainer</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="#">Payments</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
             <div class="box-account">
                 <div class="top-account">
-                    <img class="cropped1" :src="img" alt="hayley-kim-pic" />
+                    <img class="cropped1" :src="avatar" alt="hayley-kim-pic" />
                     <h2>{{ name }}</h2>
                 </div>
 

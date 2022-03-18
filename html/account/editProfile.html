@@ -11,7 +11,7 @@
     <body class="edit-profile">
         <div class="outer-div" id="app" style="background-color: blue;">
             <div class="imgpreview">
-                <img :src="image" @click="$refs.imgInput.click()">
+                <img :src="avatar" @click="$refs.imgInput.click()">
             </div>
 
             <div>
@@ -40,7 +40,8 @@
                 </div>
 
                 <div class="textinput">
-                    <input type="number" id="height" v-model="height" class="text-input" :placeholder="height_display"/>
+                    <input type="number" id="heightft" v-model="heightft" class="text-input" :placeholder="heightft_display"/>
+                    <input type="number" id="heightin" v-model="heightin" class="text-input" :placeholder="heightin_display"/>
                 </div>
 
                 <div class="textinput">
@@ -65,23 +66,26 @@
             var app = new Vue({
                 el: '#app',
                 data: {
+                    // Input information
                     id: '',
                     height: '',
-                    heightInt: '',
-                    height_display: '',
+                    heightft: '',
+                    heightin: '',
                     weight: '',
-                    weightInt: '',
-                    weight_display: '',
                     description: '',
-                    description_display: 'Edit Your Description Here',
                     training_style: '',
-                    style_display: '',
                     gender: '',
-                    gender_display: '',
 
-                    // for image upload
-                    file:'',
-                    image: '/profilepictures/defaultProfile.svg',
+                    // Display Information
+                    heightft_display: '',
+                    heightin_display: '',
+                    weight_display: '',
+                    style_display: '',
+                    gender_display: '',
+                    description_display: 'Edit Your Description Here',
+
+                    // Image Information
+                    avatar: '/images/defaultProfile.png',
                 },
                 
                 created: function() {
@@ -90,77 +94,73 @@
                 },
 
                 methods: {
-                    upload(image) {
-                        let img = image.target.files[0];
-                        let picture = new FormData();
-                        picture.append('file', img);
-                        var reader = new FileReader();
-                        var this_ = this
-                        reader.readAsDataURL(img);
-                        reader.onload = function(image) {
-                            this_.image = this.result;
-                        }
-
-                        $.ajax({
-                            headers: {
-                                Authorization: "Bearer " + localStorage.getItem("token")
-                            },
-                            url: "http://127.0.0.1:8000/api/users/profile/update",
-                            type: "PATCH",
-                            data: picture,
-                            processData: false,
-                            contentType: false,
-
-                            success: function(rs) {
-                                if (rs != null) {
-                                    alert("upload successful");
-                                }
-                            }
-                        })
-                    },
-
                     initPerMsg() {
                         $.ajax({
                             headers: {
                                 Authorization: "Bearer " + localStorage.getItem("token")
                             },
-                            url: "http://127.0.0.1:8000/api/users/profile/",
+                            url: "http://127.0.0.1:8000/api/users/trainees/",
                             type: "GET",
                             
                             success: function(rs) {
                                 if (rs != null) {
-                                    this_.id = rs._id;
-                                    this_.heightInt = rs.user_profile.height;
-                                    this_.weightInt = rs.user_profile.weight;
-                                    this_.height_display = "Height: " + this_.heightInt + "inch";
-                                    this_.weight_display = "Weight: " + this_.weightInt + "LB";
-                                    this_.style_display = rs.user_profile.training_style;
-                                    this_.gender_display = rs.user_profile.gender;
-                                    if (rs.user_profile.description != null) {
-                                        this_.description_display = rs.user_profile.description;
+                                    this_.id = rs.id;
+                                    this_.height = rs.trainee.height;
+                                    this_.heightft_display = "Height(FT): " + this_.height.substring(0, 2);
+                                    this_.heightin_display = "Height(IN): " + this_.height.substring(2);
+                                    this_.weight_display = "Weight: " + rs.trainee.weight;
+                                    this_.style_display = rs.trainee.training_style;
+                                    this_.gender_display = rs.trainee.gender;
+                                    if (rs.trainee.description != null) {
+                                        this_.description_display = rs.trainee.description;
+                                    }
+
+                                    if (rs.trainee.avatar != null) {
+                                        this_.avatar = rs.trainee.avatar;
                                     }
                                 }
                             }
                         })
                     },
 
+                    upload(image) {
+                        var img = image.target.files[0];
+                        var reader = new FileReader();
+                        if (img) {
+                            reader.readAsDataURL(img);
+                            reader.onload = function(e) {
+                                this_.avatar = reader.result;
+                            }
+                        }
+                    },
+
                     submit() {
                         var datas = {};
                         this.gender = $('#gender :selected').val();
                         this.training_style = $('#styles :selected').val();
+                        datas.avatar = this.avatar;
                         
-                        if (this.height != '') {
-                            datas.height = this.height;
+                        if (this.heightft != '' && this.heightin != '') {
+                            datas.height = this.heightft + "\'" + this.heightin + "\"";
                         }
                         else {
-                            datas.height = this.heightInt;
+                            if (this.heightft == '' && this.heightin != '') {
+                                datas.height = 0 + "\'" + this.heightin + "\"";
+                            }
+                            else if (this.heightin == '' && this.heightft != '') {
+                                datas.height = this.heightft + "\'" + 0 + "\"";
+                            }
+                            else {
+                                datas.height = this.height;
+                            }
                         }
 
                         if (this.weight != '') {
-                            datas.weight = this.weight;
+                            datas.weight = this.weight + "LB";
                         }
                         else {
-                            datas.weight = this.weightInt;
+                            var weightstr = this.weight_display
+                            datas.weight = weightstr.substring(9);
                         }
 
                         if (this.description != '') {
@@ -181,7 +181,7 @@
                             datas.training_style = this.training_style;
                         }
                         else {
-                            datas.training_style = '';
+                            datas.training_style = this.style_display;
                         }
 
                         var data = JSON.stringify(datas);
@@ -191,11 +191,11 @@
                             headers: {
                                 Authorization: "Bearer " + localStorage.getItem("token")
                             },
-                            url: "http://127.0.0.1:8000/api/users/profile/update/" + this.id + "/",
+                            url: "http://127.0.0.1:8000/api/users/trainees/update/" + this.id + "/",
                             type: "PUT",
                             data: data,
                             dataType: "json",
-                            contentType: "application/json",
+                            contentType: "application/json; charset=utf_8",
 
                             success: function(rs) {
                                 alert("Information Modified.")

@@ -45,20 +45,20 @@ nav {
     transition: transform 0.5s ease-in-out;
 }
 
-ul {
+.navul {
     list-style-type: none;
     padding: 0;
     margin-top: 50px;
 }
 
-a {
+.nava {
     text-decoration: none;
     color: white;
     padding: 1.5em;
     display: block;
 }
 
-a:hover {
+.nava:hover {
     background: rgb(235, 235, 235);
     color: black;
 }

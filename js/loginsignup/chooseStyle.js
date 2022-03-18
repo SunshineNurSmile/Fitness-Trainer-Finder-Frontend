@@ -20,7 +20,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: "http://127.0.0.1:8000/api/users/profile/create",
+                url: "http://127.0.0.1:8000/api/users/trainees/create",
                 type: "POST",
                 dataType: "json",
                 data: localStorage.user_profile,

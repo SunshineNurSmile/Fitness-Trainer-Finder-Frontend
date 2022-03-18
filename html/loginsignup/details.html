@@ -19,11 +19,16 @@
 
                 <form>
                     <div class="input">
-                        <input type="number" id="weight" v-model="weight" class="input-field" placeholder="Weight (lbs)" required />
+                        <input type="number" id="weight" v-model="weight" class="input-field" placeholder="Weight (LB)" required />
                     </div>
 
                     <div class="input">
-                        <input type="number" id="height" v-model="height" class="input-field" placeholder="Height (inches)" required />
+                        <div>
+                            <input type="number" id="heightft" v-model="heightft" class="input-field" placeholder="Height (FT)" required />
+                        </div>
+                        <div>
+                            <input type="number" id="heightin" v-model="heightin" class="input-field" placeholder="Height (IN)" required />
+                        </div> 
                     </div>
 
                     <div class="input">
