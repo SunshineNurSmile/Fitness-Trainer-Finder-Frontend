@@ -117,6 +117,11 @@ nav {
     margin-right: 0;
 }
 
+.selection:focus {
+    outline: none !important;
+    background-color: #f5989d;
+}
+
 .input {
     display: flex;
     margin-top: 20px;
@@ -124,7 +129,7 @@ nav {
 
 .text-input {
     height: auto;
-    width: 50vw;
+    width: 49vw;
     color: white;
     border: 0;
     background-color: transparent;
@@ -135,12 +140,10 @@ nav {
     margin-right: 0;
 }
 
-.text-input::placeholder {
-    color: #bdbdbd;
-}
-
-input:focus::placeholder {
-    color: transparent;
+input:focus {
+    outline: none !important;
+    border: 2px solid #f5989d;
+    border-radius: 8px;
 }
 
 .desc-input {
@@ -155,8 +158,12 @@ input:focus::placeholder {
     font-size: 16px;
     border: 1px solid #f5989d;
     border-radius: 8px;
-    padding: 5px 20px;
+    padding: 5px 8px;
     margin-top: 10px;
+}
+
+textarea:focus {
+    outline: none !important;
 }
 
 .buttons {

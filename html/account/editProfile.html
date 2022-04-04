@@ -44,7 +44,7 @@
                     <div>Training Style: </div>
                     <select class="selection" name="training_style" id="training_style" v-model="training_style">
                         <option value="" selected disabled hidden>Select Training Style</option>
-                        <option value="Yoga">Yoga</option>
+                        <option id='option' value="Yoga">Yoga</option>
                         <option value="Pilates">Pilates</option>
                         <option value="Bodybuilding">Body Building</option>
                         <option value="Bodyweight">Body Weight</option>
@@ -79,7 +79,7 @@
 
                 <div class="desc-input">
                     <div>Description: </div>
-                    <textarea name="description" id="description" cols="30" rows="10" v-model="description" :placeholder="description"></textarea>
+                    <textarea name="description" id="description" cols="34" rows="10" v-model="description" :placeholder="description"></textarea>
                 </div>
 
                 <div class="buttons">
