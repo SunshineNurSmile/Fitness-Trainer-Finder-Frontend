@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: -webkit-fill-available;
+    line-height: 1.5;
+}
+
+/* Navigation Bar */
+.menu {
+    width: 30px;
+    height: 30px;
+}
+
+.close {
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+nav {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    height: 50vh;
+    width: 50vw;
+    border-radius: 8px;
+    background: #f5989d;
+    box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    text-transform: uppercase;
+    transform: translateX(-150%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.navul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.nava {
+    text-decoration: none;
+    color: white;
+    padding: 1.5em;
+    display: block;
+}
+
+.nava:hover {
+    background: rgb(235, 235, 235);
+    color: black;
+}
+
+.open-nav {
+    transform: translateX(0%);
+}
+/* End of Navigation Bar */
+
+.edit-profile {
+    background-color: #395b64;
+}
+
+.avatar {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 2px solid #f5989d;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+.outerdiv {
+    padding: 30px;
+    height: 90vh;
+}
+
+.account {
+    width: auto;
+    height: 170px;
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.edit {
+    width: auto;
+    height: calc( 90vh - 240px );
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.dropdown {
+    display: flex;
+    margin-top: 20px;
+}
+
+.selection {
+    width: 50vw;
+    height: auto;
+    background-color: #395b64;
+    color: white;
+    border: 2px solid #f5989d;
+    border-radius: 8px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.input {
+    display: flex;
+    margin-top: 20px;
+}
+
+.text-input {
+    height: auto;
+    width: 50vw;
+    color: white;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    font-size: 1rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.text-input::placeholder {
+    color: #bdbdbd;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.desc-input {
+    width: auto;
+    height: 30vh;
+    margin-top: 20px;
+}
+
+#description {
+    background-color: #395b64;
+    color: white;
+    font-size: 16px;
+    border: 1px solid #f5989d;
+    border-radius: 8px;
+    padding: 5px 20px;
+    margin-top: 10px;
+}
+
+.buttons {
+    height: auto;
+    width: auto;
+}
+
+.button {
+    background-color: #f5989d;
+    color: black;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    padding: 10px 14vw;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}

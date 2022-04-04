@@ -9,19 +9,40 @@
     </head>
 
     <body class="edit-profile">
-        <div class="outer-div" id="app" style="background-color: blue;">
-            <div class="imgpreview">
-                <img :src="avatar" @click="$refs.imgInput.click()">
+        <div class="outerdiv" id="app">
+            <div class="navdiv">
+                <img class = "menu" src="/images/menu-button.svg" alt="menu-button"/>
+                
+                <nav>
+                    <img class="close" src="/images/close-button.svg" alt="close-button"/>
+            
+                    <ul class="navul">
+                        <li class="navli">
+                            <a class="nava" href="/html/home/homepage.html">Home Page</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="/html/account/accountPage.html">Profile Page</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="#">Your Trainer</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="#">Payments</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
 
-            <div>
+            <div class="account">
+                <img class="avatar" :src="avatar" @click="$refs.imgInput.click()">
+    
                 <input type="file" name="img" accept="image/*" style="display:none" @change="upload($event)" ref="imgInput">
             </div>
 
             <div class="edit">
                 <div class="dropdown">
-                    <h4>Training Style: </h4>
-                    <select class="style_selection" name="training_style" id="training_style" v-model="training_style">
+                    <div>Training Style: </div>
+                    <select class="selection" name="training_style" id="training_style" v-model="training_style">
                         <option value="" selected disabled hidden>Select Training Style</option>
                         <option value="Yoga">Yoga</option>
                         <option value="Pilates">Pilates</option>
@@ -33,35 +54,38 @@
                 </div>
 
                 <div class="dropdown">
-                    <h4>Gender: </h4>
-                    <select class="gender_selection" name="gender" id="gender" v-model="gender">
+                    <div>Gender: </div>
+                    <select class="selection" name="gender" id="gender" v-model="gender">
                         <option value="" selected disabled hidden>Select Gender</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
                 </div>
 
-                <div class="textinput">
-                    <h4>Height(FT): </h4>
+                <div class="input">
+                    <div>Height(FT): </div>
                     <input type="number" id="heightft" v-model="heightft" class="text-input" :placeholder="heightft"/>
-                    <h4>Height(IN): </h4>
+                </div>
+
+                <div class="input">
+                    <div>Height(IN): </div>
                     <input type="number" id="heightin" v-model="heightin" class="text-input" :placeholder="heightin"/>
                 </div>
 
-                <div class="textinput">
-                    <h4>Weight(LB): </h4>
+                <div class="input">
+                    <div>Weight(LB): </div>
                     <input type="number" id="weight" v-model="weight" class="text-input" :placeholder="weight"/>
                 </div>
 
-                <div class="textinput">
-                    <h4>Description: </h4>
-                    <input type="text" id="description" v-model="description" class="text-input" :placeholder="description"/>
+                <div class="desc-input">
+                    <div>Description: </div>
+                    <textarea name="description" id="description" cols="30" rows="10" v-model="description" :placeholder="description"></textarea>
                 </div>
-            </div>
 
-            <div class="footer-buttons">
-                <button @click="submit()">Submit</button>
-                <button @click="cancel()">Cancel</button>
+                <div class="buttons">
+                    <button class="button" @click="submit()">Submit</button>
+                    <button class="button" @click="cancel()">Cancel</button>
+                </div>
             </div>
         </div>
 

@@ -4,7 +4,7 @@ var app = new Vue({
         email: '',
         password: ''
     },
-    mounted: function() {},
+
     methods: {
         login(){
             if (this.email == ''||this.password == '') {
@@ -16,6 +16,7 @@ var app = new Vue({
             data_l.password = this.password;
             var formData = JSON.stringify(data_l);
             console.log(data_l);
+
             $.ajax({
                 url: "http://127.0.0.1:8000/api/users/login/",
                 type: "post",
@@ -47,7 +48,6 @@ var app = new Vue({
                     console.error(rs.responseText);
                     alert(rs.msg);
                 }
-
             });
         },
         jump_to_signup() {

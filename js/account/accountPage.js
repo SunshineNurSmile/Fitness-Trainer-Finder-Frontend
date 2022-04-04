@@ -10,10 +10,12 @@ var app = new Vue({
         description: 'Please edit your description in the Edit Profile page using the menu button.',
         avatar: '',
     },
+
     created: function() {
         this_ = this;
         this_.initPerMsg();
     },
+    
     methods: {
         initPerMsg() {
             $.ajax({

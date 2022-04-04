@@ -3,6 +3,7 @@ var app = new Vue({
     data: {
         training_style: ''
     },
+    
     methods: {
         jump_to_MM(){
             if (this.training_style == '') {

@@ -4,7 +4,7 @@ var app = new Vue({
         Styles: true,
         Trainers: false,
     },
-    mounted: function () {},
+    
     methods: {
         open_Styles() {
             this.Styles = true;

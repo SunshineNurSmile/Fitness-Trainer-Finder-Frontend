@@ -7,7 +7,7 @@ var app = new Vue({
         heightin: '',
         dob: ''
     },
-    mounted: function() {},
+    
     methods: {
         jump_to_AT(){
             if (this.gender == ''||this.weight == ''||this.heightft == '' ||this.heightin == '' ||this.dob == '') {
