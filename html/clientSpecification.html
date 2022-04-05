@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/clientSpecification.css" />
+    </head>
+
+    <body>
+        <div class="User-Type" id="app">
+            <div class="box">
+                <!--User Type Question-->
+                <div class="body">
+                    <h1>Why are you</h1>
+                    <h1>Joining</h1>
+                    <h1>UJourny?</h1>
+                </div>
+                <!-- button -->
+                    <div class="footer" @click="trainer_signup()"> <!-- jump to trainer sign up -->
+                        <button class="trainer_button">Become a Trainer</button>
+                    </div>
+                    <div class="footer" @click="trainee_signup()"> <!-- Find a Trainer regular trainee sign up -->
+                        <button class="trainee_button">Find a Trainer</button>
+                    </div>
+                    
+            </div>
+        </div>
+
+        <footer></footer>
+        
+        <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/clientSpecification.js" type="text/javascript" charset="utf-8"></script>
+    </body>
+</html>

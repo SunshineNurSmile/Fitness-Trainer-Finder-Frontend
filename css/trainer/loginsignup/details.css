@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: -webkit-fill-available;
+    line-height: 1.5;
+}
+
+.details-page {
+    background-color: #395b64;
+    background-image: url("/images/man-holding-ball.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+.box-details {
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.body-details {
+    height: 40vh;
+    margin-top: 38vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.footer-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.details-page h1 {
+    font-size: 30px;
+    color: white;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.edit {
+    width: 80vw;
+}
+
+.dropdown {
+    display: flex;
+    margin-top: 20px;
+}
+
+.selection {
+    width: 45vw;
+    height: auto;
+    background-color: #395b64;
+    color: white;
+    border: 2px solid #f5989d;
+    border-radius: 8px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.selection:focus {
+    outline: none !important;
+    background-color: #f5989d;
+}
+
+.input {
+    margin-top: 20px;
+    display: flex;
+}
+
+.input-field {
+    height: auto;
+    width: 42vw;
+    color: white;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    font-size: 0.9rem;
+    padding: 0.25rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.input-field:focus {
+    outline: none !important;
+}
+
+.input-field::placeholder {
+    color: #bdbdbd;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.action-button {
+    margin-top: 10vh;
+    color: black;
+    background-color: #f5989d;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    padding: 10px 110px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}

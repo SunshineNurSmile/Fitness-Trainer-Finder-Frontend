@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <script src="https://kit.fontawesome.com/545d8eda61.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Avenir";
+            src: url("../fonts/Avenir.eot?#iefix") format("embedded-opentype"), url("../fonts/Avenir.woff") format("woff"), url("../fonts/Avenir.ttf") format("truetype"), url("../fonts/Avenir.svg#Avenir") format("svg");
+            height: -webkit-fill-available;
+        }
+
+        .top-container {
+            width: 100vw;
+            height: 30vh;
+            background-color: #395b64;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            position: absolute;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+        }
+
+        .top-container h1 {
+            color: white;
+            padding-left: 55px;
+            padding-bottom: 20px;
+            transform: scale(1.2, 1.2);
+        }
+
+        .button-container h1 {
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        .bottom-container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #90b4c0;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .button-container {
+            height: 8vh;
+            width: 80vw;
+            background-color: white;
+            border-radius: 10px;
+            position: absolute;
+            z-index: 3;
+            margin-top: 25vh;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .centerize {
+            display: flex;
+            justify-content: center;
+        }
+
+        .likes-container {
+            height: 6vh;
+            width: 38vw;
+            margin-top: 1vh;
+            margin-left: 2vw;
+            background-color: lightgray;
+            border-radius: 10px;
+            position: absolute;
+            z-index: 4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chats-container {
+            height: 6vh;
+            width: 38vw;
+            margin-top: 1vh;
+            margin-left: 40vw;
+            border-radius: 10px;
+            position: absolute;
+            z-index: 4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fa-heart {
+            color: red;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .invisible-padding {
+            border: 2px solid red;
+            margin-top: 35vh;
+        }
+
+        .profile-list {
+            height: 15vh;
+            width: 100%;
+            background-color: white;
+            border-top: 1px solid lightgrey;
+            border-bottom: 1px solid lightgrey;
+            position: relative;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 11vh;
+            height: 11vh;
+            background-color: #90b4c0;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 2vh;
+        }
+
+        .accept-button {
+            background-color: #fbd6d2;
+            border: none;
+            border-radius: 10px;
+            color: rgba(0, 0, 0, 0.829);
+            padding: 15px 29px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+            margin: 4px 1px;
+        }
+
+        .accept-button h4,
+        .delete-button h4 {
+            font-weight: 500;
+            letter-spacing: 1px;
+            transform: scale(1.2, 1.2);
+        }
+
+        .delete-button {
+            border: none;
+            border-radius: 10px;
+            color: grey;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 4px 2px;
+        }
+    </style>
+
+    <body>
+        <div class="top-container">
+            <h1>Connections</h1>
+        </div>
+
+        <div class="bottom-container">
+            <!-- this is the light blue background -->
+        </div>
+
+        <div class="centerize">
+            <div class="button-container">
+                <div class="likes-container">
+                    <i class="fa-solid fa-heart fa-1x"></i>
+                    <h1>&nbspRequests</h1>
+                </div>
+                <div class="chats-container">
+                    <i class="fa-solid fa-comment-dots fa-1x"></i>
+                    <h1>&nbspChats</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="invisible-padding"></div>
+            <div class="profile-list">
+                <div>
+                    <img class="profile-image" />
+                </div>
+                <div>
+                    <h2>Hayley Kim</h2>
+
+                    <button class="accept-button">
+                        <h4>Accept</h4>
+                    </button>
+
+                    <button class="delete-button"><h4>Delete</h4></button>
+                </div>
+            </div>
+
+            <div class="profile-list">
+                <div class="profile-image"></div>
+                <div>
+                    <h2>Brian Stone</h2>
+
+                    <button class="accept-button">
+                        <h4>Accept</h4>
+                    </button>
+
+                    <button class="delete-button"><h4>Delete</h4></button>
+                </div>
+            </div>
+
+            <div class="profile-list">
+                <div class="profile-image"></div>
+                <div>
+                    <h2>Pete Davidson</h2>
+
+                    <button class="accept-button">
+                        <h4>Accept</h4>
+                    </button>
+
+                    <button class="delete-button"><h4>Delete</h4></button>
+                </div>
+            </div>
+
+            <div class="profile-list">
+                <div class="profile-image"></div>
+                <div>
+                    <h2>Ryan Tan</h2>
+
+                    <button class="accept-button">
+                        <h4>Accept</h4>
+                    </button>
+
+                    <button class="delete-button"><h4>Delete</h4></button>
+                </div>
+            </div>
+
+            <div class="profile-list">
+                <div class="profile-image"></div>
+                <div>
+                    <h2>Michelle Choi</h2>
+
+                    <button class="accept-button">
+                        <h4>Accept</h4>
+                    </button>
+
+                    <button class="delete-button"><h4>Delete</h4></button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

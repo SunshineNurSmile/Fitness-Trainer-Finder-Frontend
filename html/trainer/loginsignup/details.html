@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Details Page</title>
+        <link rel="stylesheet" href="/css/trainer/loginsignup/details.css" />
+    </head>
+
+    <body class="details-page">
+        <div class="box-details" id="app">
+            <div class="body-details">
+                <h1>Your details</h1>
+
+                <!-- Insert drop downs from editProfile styles and gender -->
+
+                <div class="edit">
+                    <div class="dropdown">
+                        <div>Training Style: </div>
+                        <select class="selection" name="training_style" id="training_style" v-model="training_style">
+                            <option value="" selected disabled hidden>Select Training Style</option>
+                            <option value="Yoga">Yoga</option>
+                            <option value="Pilates">Pilates</option>
+                            <option value="Bodybuilding">Body Building</option>
+                            <option value="Bodyweight">Body Weight</option>
+                            <option value="Powerlifting">Power Lifting</option>
+                            <option value="Olympiclifting">Olympic Lifting</option>
+                        </select>
+                    </div>
+    
+                    <div class="dropdown">
+                        <div>Gender: </div>
+                        <select class="selection" name="gender" id="gender" v-model="gender">
+                            <option value="" selected disabled hidden>Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="input">
+                        <div>Birthday: </div>
+                        <input type="date" id="birthday" v-model="dob" class="input-field" required="" />
+                    </div>
+                </div>
+
+                <div class="footer-details" @click="jump_to_home()"> <!-- Jump to trainer Homepage (client listHave)-->
+                    <button class="action-button">Continue</button>
+                </div>
+            </div>
+        </div>
+
+        <footer></footer>
+
+        <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/trainer/loginsignup/details.js" type="text/javascript" charset="utf-8"></script>
+    </body>
+</html>

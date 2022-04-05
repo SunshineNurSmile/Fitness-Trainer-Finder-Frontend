@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Payment Tier options</title>
+    </head>
+
+    <script src="https://kit.fontawesome.com/545d8eda61.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Avenir";
+            src: url("../fonts/Avenir.eot?#iefix") format("embedded-opentype"), url("../fonts/Avenir.woff") format("woff"), url("../fonts/Avenir.ttf") format("truetype"), url("../fonts/Avenir.svg#Avenir") format("svg");
+            height: -webkit-fill-available;
+            background-color: #90b4c0;
+        }
+
+        .top-container {
+            width: 100vw;
+            height: 17vh;
+            background-color: #395b64;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .top-container h1 {
+            color: white;
+            transform: scale(1.2, 1.2);
+            font-size: 1.7rem;
+        }
+
+        .payment-padding {
+            padding-top: 17vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .payment-container {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            padding: 10px 20px;
+            margin-top: 20px;
+            width: 300px;
+            height: 240px;
+            color: black;
+            border-radius: 10px;
+            background-color: white;
+            border: 2px solid white;
+            z-index: 2;
+        }
+
+        .pricing {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .choose-button {
+            display: flex;
+            justify-content: center;
+            color: #395b64;
+            padding-top: 10px;
+        }
+
+        .choose-button button {
+            color: white;
+            background-color: #395b64;
+            padding: 6px 30px;
+            border: none;
+            border-radius: 8px;
+            font-style: italic;
+        }
+
+        .tier-info {
+            padding-top: 20px;
+        }
+
+        .tier-info p {
+            font-size: 90%;
+            font-style: normal;
+        }
+
+        .tier-info i {
+            color: #395b64;
+        }
+    </style>
+
+    <body>
+        <div class="top-container">
+            <h1>Choose your plan</h1>
+        </div>
+
+        <div class="bottom-container"></div>
+
+        <div class="payment-padding">
+            <div class="payment-container">
+                <h2>Free</h2>
+
+                <div class="pricing">
+                    <h1>&nbsp; $0</h1>
+                    <p>&nbsp; per month</p>
+                </div>
+
+                <div class="choose-button">
+                    <button>Choose this option</button>
+                </div>
+
+                <div class="tier-info">
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        &nbsp;Free access to basic tutorials
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        &nbsp;Free workout consultations
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        &nbsp;Free starter meal program
+                    </p>
+                </div>
+            </div>
+
+            <div class="payment-container">
+                <h2>Basic</h2>
+
+                <div class="pricing">
+                    <h1>&nbsp; $100</h1>
+                    <p>&nbsp; per month</p>
+                </div>
+
+                <div class="choose-button">
+                    <button>Choose this option</button>
+                </div>
+
+                <div class="tier-info">
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        &nbsp;10 training sessions
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        &nbsp;Personalized workout program
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        &nbsp;Personlized meal program
+                    </p>
+                </div>
+            </div>
+
+            <div class="payment-container">
+                <h2>Free</h2>
+
+                <div class="pricing">
+                    <h1>&nbsp; $200</h1>
+                    <p>&nbsp; per month</p>
+                </div>
+
+                <div class="choose-button">
+                    <button>Choose this option</button>
+                </div>
+
+                <div class="tier-info">
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        &nbsp;20 training sessions
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        &nbsp;Personalized workout program
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        &nbsp;Personlized meal program
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
