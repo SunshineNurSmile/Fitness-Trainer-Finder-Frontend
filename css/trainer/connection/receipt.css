@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: -webkit-fill-available;
+    background-color: #90b4c0;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.top-container {
+    width: 100vw;
+    height: 28vh;
+    padding: 0 0 50px 40px;
+    color: white;
+    background-color: #395b64;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+.centerize-earning {
+    display: flex;
+    justify-content: center;
+}
+
+.earning-container {
+    margin-top: 20vh;
+    width: 330px;
+    height: 15vh;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    display: flex;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.earning-text {
+    width: 175px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.earning-amount {
+    width: 155px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.earning-rectangle {
+    width: 140px;
+    height: 13vh;
+    background-color: lightgray;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.earning-rectangle h1 {
+    font-weight: 100;
+}
+
+.receipt-container {
+    margin-top: 37vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.receipt-box {
+    background-color: white;
+    margin: 10px;
+    width: 330px;
+    height: 10vh;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.receipt-box h3 {
+    font-weight: 100;
+}
+.receipt-id {
+    width: 165px;
+    padding-left: 20px;
+}
+
+.receipt-amount {
+    width: 165px;
+    display: flex;
+    justify-content: center;
+}
