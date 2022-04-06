@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trainer Card</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Avenir";
+            src: url("../fonts/Avenir.eot?#iefix") format("embedded-opentype"), url("../fonts/Avenir.woff") format("woff"), url("../fonts/Avenir.ttf") format("truetype"), url("../fonts/Avenir.svg#Avenir") format("svg");
+            height: -webkit-fill-available;
+            background-color: #90b4c0;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        .top-container {
+            width: 100vw;
+            height: 45vh;
+            background-color: #395b64;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .profile-image {
+            width: 20vh;
+            height: 20vh;
+            background-color: #90b4c0;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .bio-box {
+            margin-top: 22.5vh;
+            background-color: white;
+            width: 90vw;
+            height: 30vh;
+            position: absolute;
+            border-radius: 20px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .bio-text {
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .bio-text h1 {
+            font-size: 1.5rem;
+        }
+
+        .bio-box h3 {
+            font-weight: 100;
+        }
+
+        .about-text {
+            margin: 0 30px 0 30px;
+        }
+
+        .request-button {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 15px;
+        }
+
+        .request-button button {
+            background-color: #fbd6d2;
+            border: none;
+            border-radius: 10px;
+            color: black;
+            padding: 15px 29px;
+            font-size: 15px;
+            margin: 9px 1px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .bottom-container {
+            margin-top: 55vh;
+            position: absolute;
+            width: 90vw;
+            padding-bottom: 100px;
+        }
+
+        .trainer-images {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .trainer-images img {
+            background-color: #fbd6d2;
+            height: 110px;
+            width: 110px;
+            border-radius: 15px;
+            margin: 5px 0 5px 0;
+            object-fit: cover;
+
+        }
+
+        iframe {
+            aspect-ratio: 16 / 9;
+            height: 100%;
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+    <body>
+        <div class="top-container">
+            <div>
+                <!-- add profile image -->
+                <img class="profile-image" src="/images/personalTrainerPhoto.jpg"/>
+            </div>
+
+            <div class="bio-box">
+                <div class="bio-text">
+                    <h1>Madara Uchiha</h1>
+                    <h3>Bodybuilding Coach</h3>
+                </div>
+
+                <div class="about-text">
+                    <h3><b>About</b></h3>
+                    <h3>Fitness is my life. I hope to bring that passion to people searching for a fitness plan.</h3>
+                </div>
+
+                <div class="request-button">
+                    <button>
+                        <h3>Request Message</h3>
+                    </button>
+                </div>
+            </div>
+
+            <div class="bottom-container">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <div class="trainer-images">
+                    <!-- add photos here -->
+                    <div class="img" ><img src="/images/img1.jpg"></div>
+                    <div class="img"><img src="/images/img2.jpg"></div>
+                    <div class="img"><img src="/images/img3.jpg"></div>
+                    <div class="img"><img src="/images/img4.jpg"></div>
+                    <div class="img"><img src="/images/img5.jpg"></div>
+                    <div class="img"><img src="/images/img6.jpg"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

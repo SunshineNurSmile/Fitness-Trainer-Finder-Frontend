@@ -21,6 +21,12 @@
                 background-color: #90b4c0;
             }
 
+            .sticky {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+            }
+
             .top-container {
                 width: 100vw;
                 height: 28vh;
@@ -50,6 +56,7 @@
                 z-index: 2;
                 background-color: white;
                 display: flex;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
             }
 
             .earning-text {
@@ -82,14 +89,16 @@
             }
 
             .receipt-container {
-                margin-top: 40vh;
+                margin-top: 37vh;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-direction: column;
             }
 
             .receipt-box {
                 background-color: white;
+                margin: 10px;
                 width: 330px;
                 height: 10vh;
                 border-radius: 10px;
@@ -114,26 +123,118 @@
         </style>
     </head>
     <body>
-        <div class="top-container">
-            <h1>Hayley Kim</h1>
-            <h3>ID: ABC12345</h3>
-        </div>
+        <div class="sticky">
+            <div class="top-container">
+                <h1>Hayley Kim</h1>
+                <h3>ID: ABC12345</h3>
+            </div>
 
-        <div class="centerize-earning">
-            <div class="earning-container">
-                <div class="earning-text">
-                    <h3>Your Earnings:</h3>
-                </div>
+            <div class="centerize-earning">
+                <div class="earning-container">
+                    <div class="earning-text">
+                        <h3>Your Earnings:</h3>
+                    </div>
 
-                <div class="earning-amount">
-                    <div class="earning-rectangle">
-                        <h1>$2,000</h1>
+                    <div class="earning-amount">
+                        <div class="earning-rectangle">
+                            <h1>$2,000</h1>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="receipt-container">
+            <div class="receipt-box">
+                <div class="receipt-id">
+                    <h3>Receipt 1:</h3>
+                </div>
+
+                <div class="receipt-amount">
+                    <h3>$500</h3>
+                </div>
+            </div>
+
+            <div class="receipt-box">
+                <div class="receipt-id">
+                    <h3>Receipt 1:</h3>
+                </div>
+
+                <div class="receipt-amount">
+                    <h3>$500</h3>
+                </div>
+            </div>
+
+            <div class="receipt-box">
+                <div class="receipt-id">
+                    <h3>Receipt 1:</h3>
+                </div>
+
+                <div class="receipt-amount">
+                    <h3>$500</h3>
+                </div>
+            </div>
+
+            <div class="receipt-box">
+                <div class="receipt-id">
+                    <h3>Receipt 1:</h3>
+                </div>
+
+                <div class="receipt-amount">
+                    <h3>$500</h3>
+                </div>
+            </div>
+
+            <div class="receipt-box">
+                <div class="receipt-id">
+                    <h3>Receipt 1:</h3>
+                </div>
+
+                <div class="receipt-amount">
+                    <h3>$500</h3>
+                </div>
+            </div>
+
+            <div class="receipt-box">
+                <div class="receipt-id">
+                    <h3>Receipt 1:</h3>
+                </div>
+
+                <div class="receipt-amount">
+                    <h3>$500</h3>
+                </div>
+            </div>
+
+            <div class="receipt-box">
+                <div class="receipt-id">
+                    <h3>Receipt 1:</h3>
+                </div>
+
+                <div class="receipt-amount">
+                    <h3>$500</h3>
+                </div>
+            </div>
+
+            <div class="receipt-box">
+                <div class="receipt-id">
+                    <h3>Receipt 1:</h3>
+                </div>
+
+                <div class="receipt-amount">
+                    <h3>$500</h3>
+                </div>
+            </div>
+
+            <div class="receipt-box">
+                <div class="receipt-id">
+                    <h3>Receipt 1:</h3>
+                </div>
+
+                <div class="receipt-amount">
+                    <h3>$500</h3>
+                </div>
+            </div>
+
             <div class="receipt-box">
                 <div class="receipt-id">
                     <h3>Receipt 1:</h3>

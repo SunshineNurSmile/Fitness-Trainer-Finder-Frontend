@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="editPaymentPlan.css" />
+        <title>Payment Tier options</title>
+    </head>
+
+    <script src="https://kit.fontawesome.com/545d8eda61.js" crossorigin="anonymous"></script>
+       
+    <body>
+        <div class="top-container">
+            <h1>Choose your plan</h1>
+        </div>
+
+        <div class="bottom-container"></div>
+
+        <div class="payment-padding">
+            <div class="payment-container">
+                <h2>Free</h2>
+
+                <div class="pricing">
+                    <h1>&nbsp; $0</h1>
+                    <p>&nbsp; per month</p>
+                </div>
+
+                <div class="choose-button">
+                    <button>Choose this option</button>
+                </div>
+
+                <div class="tier-info">
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        <label for="planDescription"></label>
+                        &nbsp;<input type="text" id="Tier1-line1" name="Tier1">
+                    </p>
+                        <!--JS for "On Enter Key Pressed" -->
+                        <script>
+                            $("#Tier1-line1").on('keyup', function (event) {
+                                if (event.keyCode == 13) {
+                                    console.log("Enter key pressed!!!!");
+                                }
+                            });
+                        </script>
+                        <!-- End JS -->
+
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        <label for="planDescription"></label>
+                        &nbsp;<input type="text" id="Tier1-line2 name=" name="Tier1">
+                    
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        <label for="planDescription"></label>
+                        &nbsp;<input type="text" id="Tier1-line3 name=" name="Tier1">
+                    </p>
+                </div>
+            </div>
+
+            <div class="payment-container">
+                <h2>Basic</h2>
+
+                <div class="pricing">
+                    <h1>&nbsp; <label for="Price"></label></h1>
+                    <input type="text" id="tier2-Price" name="tier2-Price">
+                    <p>&nbsp; per month</p>
+                </div>
+
+                <div class="choose-button">
+                    <button>Choose this option</button>
+                </div>
+
+                <div class="tier-info">
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        <label for="planDescription"></label>
+                        &nbsp;<input type="text" id="Tier2-line1" name="Tier2">
+                    
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        <label for="planDescription"></label>
+                        &nbsp;<input type="text" id="Tier2-line2 name=" name="Tier2">
+                    
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        <label for="planDescription"></label>
+                        &nbsp;<input type="text" id="Tier2-line3 name=" name="Tier2">
+                    </p>
+                </div>
+            </div>
+
+            <div class="payment-container">
+                <h2>Extra</h2>
+
+                <div class="pricing">
+                    <h1>&nbsp; <label for="Price"></label></h1>
+                    <input type="text" id="tier3-Price" name="tier3-Price">
+                    <p>&nbsp; per month</p>
+                </div>
+
+                <div class="choose-button">
+                    <button>Choose this option</button>
+                </div>
+
+                <div class="tier-info">
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        <label for="planDescription"></label>
+                        &nbsp;<input type="text" id="Tier3-line1" name="Tier3">
+                    
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        <label for="planDescription"></label>
+                        &nbsp;<input type="text" id="Tier3-line2 name=" name="Tier3">
+                    
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-atom"></i>
+                        <label for="planDescription"></label>
+                        &nbsp;<input type="text" id="Tier3-line3 name=" name="Tier3">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/index.js" type="text/javascript" charset="utf-8"></script>
+    </body>
+</html>
