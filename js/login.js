@@ -32,7 +32,7 @@ var app = new Vue({
                             console.log(rs);
                             window.localStorage.setItem('token', rs.token);
                             alert("Login successful!");
-                            window.location.href = "/html/trainer/trainerProfile.html";
+                            window.location.href = "/video.html";
                         } else {
                             alert(rs.msg);
                         }
