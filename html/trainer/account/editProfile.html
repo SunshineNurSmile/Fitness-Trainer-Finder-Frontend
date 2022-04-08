@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/trainer/account/editProfile.css">
+        <title>Edit Profile</title>
+    </head>
+
+    <body>
+        <div class="navdiv">
+            <img class = "menu" src="/images/menu-button.svg" alt="menu-button"/>
+            
+            <nav>
+                <img class="close" src="/images/close-button.svg" alt="close-button"/>
+        
+                <ul class="navul">
+                    <li class="navli">
+                        <a class="nava" href="/html/trainee/home/homepage.html">Home Page</a>
+                    </li>
+                    <li class="navli">
+                        <a class="nava" href="/html/trainee/account/accountPage.html">Profile Page</a>
+                    </li>
+                    <li class="navli">
+                        <a class="nava" href="#">Your Trainer</a>
+                    </li>
+                    <li class="navli">
+                        <a class="nava" href="#">Payments</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="outer-div" id="app">
+            <div class="top-container">
+                <div>
+                    <img class="avatar" :src="avatar" @click="$refs.avatarInput.click()">
+        
+                    <input type="file" name="img" accept="image/*" style="display:none" @change="upload($event)" ref="avatarInput">
+                </div>
+    
+                <div>
+                    <div>Training Style: </div>
+                    <select class="selection" name="training_style" id="training_style" v-model="training_style">
+                        <option value="" selected disabled hidden>Select Training Style</option>
+                        <option id='option' value="Yoga">Yoga</option>
+                        <option value="Pilates">Pilates</option>
+                        <option value="Bodybuilding">Body Building</option>
+                        <option value="Bodyweight">Body Weight</option>
+                        <option value="Powerlifting">Power Lifting</option>
+                        <option value="Olympiclifting">Olympic Lifting</option>
+                    </select>
+                </div>
+                    
+                <div>
+                    <div>Description: </div>
+                    <textarea name="description" id="description" cols="34" rows="10" v-model="description" :placeholder="description"></textarea>
+                </div>
+            </div>
+    
+            <div class="container">
+                <div>
+                    <div class="upload-div">
+                        <label>Select video to upload.</label>
+                        <input type="file" id="video-upload" accept="video/*" @change="uploadvideo($event)">
+                    </div>
+                    <input type="submit" value="Upload" class="upload-button" @click="video_upload(0, null)"> 
+                </div>
+            </div>
+    
+            <div class="container">
+                <div>
+                    <img class="trainer-image" :src="img1" @click="$refs.img1Input.click()">
+        
+                    <input type="file" name="img1" accept="image/*" style="display:none" @change="upload1($event)" ref="img1Input">
+                </div>
+    
+                <div>
+                    <img class="trainer-image" :src="img2" @click="$refs.img2Input.click()">
+        
+                    <input type="file" name="img2" accept="image/*" style="display:none" @change="upload2($event)" ref="img2Input">
+                </div>
+    
+                <div>
+                    <img class="trainer-image" :src="img3" @click="$refs.img3Input.click()">
+        
+                    <input type="file" name="img3" accept="image/*" style="display:none" @change="upload3($event)" ref="img3Input">
+                </div>
+    
+                <div>
+                    <img class="trainer-image" :src="img4" @click="$refs.img4Input.click()">
+        
+                    <input type="file" name="img4" accept="image/*" style="display:none" @change="upload4($event)" ref="img4Input">
+                </div>
+    
+                <div>
+                    <img class="trainer-image" :src="img5" @click="$refs.img5Input.click()">
+        
+                    <input type="file" name="img5" accept="image/*" style="display:none" @change="upload5($event)" ref="img5Input">
+                </div>
+    
+                <div>
+                    <img class="trainer-image" :src="img6" @click="$refs.img6Input.click()">
+        
+                    <input type="file" name="img6" accept="image/*" style="display:none" @change="upload6($event)" ref="img6Input">
+                </div>
+    
+                <div class="buttons">
+                    <button class="button" @click="submit()">Submit</button>
+                    <button class="button" @click="cancel()">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/trainer/account/editProfile.js" type="text/javascript" charset="utf-8"></script>
+    </body>
+</html>

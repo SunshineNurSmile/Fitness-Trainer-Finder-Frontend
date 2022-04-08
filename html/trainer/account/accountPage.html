@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/trainer/account/accountPage.css">
+        <title>Trainer account page</title>
+    </head>
+
+    <body>
+        <div class="navdiv">
+            <img class = "menu" src="/images/menu-button.svg" alt="menu-button"/>
+            
+            <nav>
+                <img class="close" src="/images/close-button.svg" alt="close-button"/>
+        
+                <ul class="navul">
+                    <li class="navli">
+                        <a class="nava" href="/html/trainer/home/clientlist.html">Home Page</a>
+                    </li>
+                    <li class="navli">
+                        <a class="nava" href="/html/trainer/account/editProfile.html">Edit Profile</a>
+                    </li>
+                    <li class="navli">
+                        <a class="nava" href="#">Your Trainer</a>
+                    </li>
+                    <li class="navli">
+                        <a class="nava" href="#">Payments</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="top-container" id="app">
+            <div>
+                <!-- add profile image -->
+                <img class="profile-image" :src="avatar"/>
+            </div>
+
+            <div class="bio-box">
+                <div class="bio-text">
+                    <h1>{{ name }}</h1>
+                    <h3>{{ style }}</h3>
+                </div>
+
+                <div class="about-text">
+                    <h3><b>About</b></h3>
+                    <h3>{{ description }}</h3>
+                </div>
+            </div>
+
+            <div class="bottom-container">
+                <!-- <iframe src="/video.mp4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                <video class="video" controls>
+                    <source v-if="videourl" :src="videourl" type="video/mp4">
+                </video>
+
+                <div class="trainer-images">
+                    <!-- add photos here -->
+                    <img :src="img1"/>
+                    <img :src="img2"/>
+                    <img :src="img3"/>
+                    <img :src="img4"/>
+                    <img :src="img5"/>
+                    <img :src="img6"/>
+                </div>
+            </div>
+        </div>
+
+        <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/trainer/account/accountPage.js" type="text/javascript" charset="utf-8"></script>
+    </body>
+</html>

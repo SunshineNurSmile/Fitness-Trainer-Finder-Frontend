@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: -webkit-fill-available;
+    background-color: #90b4c0;
+}
+
+/* Navigation Bar */
+.navdiv {
+    background-color: #395b64;
+}
+
+.menu {
+    width: 30px;
+    height: 30px;
+}
+
+.close {
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+nav {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    height: 50vh;
+    width: 50vw;
+    border-radius: 8px;
+    background: #f5989d;
+    box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    text-transform: uppercase;
+    transform: translateX(-150%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.navul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.nava {
+    text-decoration: none;
+    color: white;
+    padding: 1.5em;
+    display: block;
+}
+
+.nava:hover {
+    background: rgb(235, 235, 235);
+    color: black;
+}
+
+.open-nav {
+    transform: translateX(0%);
+}
+/* End of Navigation Bar */
+
+.top-container {
+    width: 100vw;
+    height: 50vh;
+    background-color: #395b64;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.avatar {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 2px solid #90b4c0;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+.upload-btn-wrapper {
+    width: 30vw;
+    height: auto;
+}
+
+.trainer-image {
+    width: 30vw;
+    height: 30vw;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+
+
+/* .middle-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: inherit;
+    padding: 10px;
+}
+
+.bottom-container {
+    margin-top: 55vh;
+    position: absolute;
+    width: 90vw;
+    padding-bottom: 100px;
+
+} */
+
+/* .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+} */
+
+/* .btn {
+    border: 2px solid gray;
+    background-color: white;
+    color: gray;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+} */
+
+/* .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+} */

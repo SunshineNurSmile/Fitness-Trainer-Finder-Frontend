@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: -webkit-fill-available;
+    background-color: #90b4c0;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* Navigation Bar */
+.navdiv {
+    background-color: #395b64;
+}
+
+.menu {
+    width: 30px;
+    height: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.close {
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+nav {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    height: 50vh;
+    width: 50vw;
+    border-radius: 8px;
+    background: #f5989d;
+    box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    text-transform: uppercase;
+    transform: translateX(-150%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.navul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.nava {
+    text-decoration: none;
+    color: white;
+    padding: 1.5em;
+    display: block;
+}
+
+.nava:hover {
+    background: rgb(235, 235, 235);
+    color: black;
+}
+
+.open-nav {
+    transform: translateX(0%);
+}
+/* End of Navigation Bar */
+
+.top-container {
+    width: 100vw;
+    height: 45vh;
+    background-color: #395b64;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.profile-image {
+    width: 20vh;
+    height: 20vh;
+    background-color: #90b4c0;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #90b4c0;
+}
+
+.bio-box {
+    margin-top: 22.5vh;
+    background-color: white;
+    width: 90vw;
+    height: 30vh;
+    position: absolute;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.bio-text {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bio-text h1 {
+    font-size: 1.5rem;
+}
+
+.bio-box h3 {
+    font-weight: 100;
+}
+
+.about-text {
+    margin: 0 30px 0 30px;
+}
+
+.bottom-container {
+    margin-top: 55vh;
+    position: absolute;
+    width: 90vw;
+    padding-bottom: 100px;
+}
+
+.trainer-images {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.trainer-images img {
+    background-color: #fbd6d2;
+    height: 110px;
+    width: 110px;
+    border-radius: 15px;
+    margin: 5px 0 5px 0;
+    object-fit: cover;
+}
+
+.video {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
