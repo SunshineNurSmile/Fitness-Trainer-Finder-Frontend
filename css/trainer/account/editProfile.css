@@ -1,143 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,500&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    height: -webkit-fill-available;
-    background-color: #90b4c0;
+	font-family: "Montserrat", sans-serif;
+	height: -webkit-fill-available;
+	background-color: #90b4c0;
 }
-
-/* Navigation Bar */
-.navdiv {
-    background-color: #395b64;
-}
-
-.menu {
-    width: 30px;
-    height: 30px;
-}
-
-.close {
-    width: 30px;
-    height: 30px;
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
-nav {
-    position: fixed;
-    left: 10px;
-    top: 10px;
-    height: 50vh;
-    width: 50vw;
-    border-radius: 8px;
-    background: #f5989d;
-    box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    text-transform: uppercase;
-    transform: translateX(-150%);
-    transition: transform 0.5s ease-in-out;
-}
-
-.navul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 50px;
-}
-
-.nava {
-    text-decoration: none;
-    color: white;
-    padding: 1.5em;
-    display: block;
-}
-
-.nava:hover {
-    background: rgb(235, 235, 235);
-    color: black;
-}
-
-.open-nav {
-    transform: translateX(0%);
-}
-/* End of Navigation Bar */
 
 .top-container {
-    width: 100vw;
-    height: 50vh;
-    background-color: #395b64;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px;
+	width: 100vw;
+	height: 60vh;
+	background-color: #395b64;
+	text-align: center;
+	padding: 10px;
 }
 
 .avatar {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    border: 2px solid #90b4c0;
-    border-radius: 50%;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+	width: 160px;
+	height: 160px;
+	object-fit: cover;
+	border: 2px solid #90b4c0;
+	border-radius: 50%;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
 }
 
 .upload-btn-wrapper {
-    width: 30vw;
-    height: auto;
+	width: 30vw;
+	height: auto;
 }
 
 .trainer-image {
-    width: 30vw;
-    height: 30vw;
-    object-fit: cover;
-    border: 1px solid black;
+	width: 30vw;
+	height: 30vw;
+	object-fit: cover;
+	border: 1px solid black;
+}
+
+.training-style,
+.text-description {
+	color: white;
+}
+
+.selection {
+	background-color: #fbd6d2;
+	border: none;
+	border-radius: 10px;
+	color: rgba(0, 0, 0, 0.829);
+	padding: 8px 19px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 15px;
+	margin: 4px 1px;
+}
+
+.text-description {
+	margin-top: 2rem;
+}
+
+.margin {
+	margin-top: 1rem;
+}
+
+textarea {
+	width: 90vw;
+	height: 20vh;
+	border: none;
+	border-radius: 10px;
+	padding: 5px 5px;
+}
+
+textarea:focus {
+	outline: none !important;
+}
+
+.upload-container {
+	margin: 10px;
+	text-align: center;
+}
+
+.upload-button {
+	background-color: #fbd6d2;
+	border: none;
+	border-radius: 10px;
+	color: rgba(0, 0, 0, 0.829);
+	padding: 8px 19px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 15px;
+	margin: 4px 1px;
+}
+
+.images-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-content: space-evenly;
+}
+
+.trainer-image {
+	border: none;
+	border-radius: 10px;
+	background-color: #fbd6d2;
 }
 
 
-
-/* .middle-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: inherit;
-    padding: 10px;
+.images-container button {
+	width: 40vw;
+	background-color: #fbd6d2;
+	border: none;
+	border-radius: 10px;
+	color: rgba(0, 0, 0, 0.829);
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 15px;
+	margin: 4px 1px;
 }
 
-.bottom-container {
-    margin-top: 55vh;
-    position: absolute;
-    width: 90vw;
-    padding-bottom: 100px;
-
-} */
-
-/* .upload-btn-wrapper {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-} */
-
-/* .btn {
-    border: 2px solid gray;
-    background-color: white;
-    color: gray;
-    padding: 8px 20px;
-    border-radius: 8px;
-    font-size: 20px;
-    font-weight: bold;
-} */
-
-/* .upload-btn-wrapper input[type=file] {
-    font-size: 100px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-} */
+.buttons {
+	padding-bottom: 100px;
+}

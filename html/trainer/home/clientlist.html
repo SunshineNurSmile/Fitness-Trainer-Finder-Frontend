@@ -4,114 +4,55 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/trainer/nav.css">
         <link rel="stylesheet" href="/css/trainer/home/clientlist.css" />
         <title>Client List</title>
     </head>
-    
     <body>
-        <header class="main-header">
-            <h1>Client List</h1>
-        </header>
-
-        <div class="main-content">
-            <div class="client-container">
-                <div class="profile-list">
-                    <div>
-                        <img class="profile-image" />
-                    </div>
-                    <div>
-                        <h2>Hayley Kim</h2>
-
-                        <button class="message-button">
-                            <h4>Message</h4>
-                        </button>
-                    </div>
-                </div>
+        <div id="app">
+            <div class="navdiv">
+                <img class = "menu" src="/images/menu.png" alt="menu-button"/>
+                
+                <nav>
+                    <img class="close" src="/images/close.png" alt="close-button"/>
+            
+                    <ul class="navul">
+                        <li class="navli">
+                            <a class="nava" href="/html/trainer/account/accountPage.html">Your Profile</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="/html/trainer/account/editProfile.html">Edit Profile</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="/html/trainer/account/paymentPlans.html">Plan Tiers</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="/html/trainer/connection/receipt.html">Income</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="/html/trainer/connection/connection.html">Chats</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" onclick="localStorage.clear();" href="/html/index.html">Log Out</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
 
-            <div class="client-container">
+            <header class="main-header">
+                <h1>Client List</h1>
+            </header>
+
+            <div class="margin"></div>
+                
+            <div class="client-container" v-for="(item,index) in information" :key="index">
                 <div class="profile-list">
                     <div>
-                        <img class="profile-image" />
+                        <img class="profile-image" :src="item.avatar" alt="pic" />
                     </div>
                     <div>
-                        <h2>Hayley Kim</h2>
-
-                        <button class="message-button">
-                            <h4>Message</h4>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="client-container">
-                <div class="profile-list">
-                    <div>
-                        <img class="profile-image" />
-                    </div>
-                    <div>
-                        <h2>Hayley Kim</h2>
-
-                        <button class="message-button">
-                            <h4>Message</h4>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="client-container">
-                <div class="profile-list">
-                    <div>
-                        <img class="profile-image" />
-                    </div>
-                    <div>
-                        <h2>Hayley Kim</h2>
-
-                        <button class="message-button">
-                            <h4>Message</h4>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="client-container">
-                <div class="profile-list">
-                    <div>
-                        <img class="profile-image" />
-                    </div>
-                    <div>
-                        <h2>Hayley Kim</h2>
-
-                        <button class="message-button">
-                            <h4>Message</h4>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="client-container">
-                <div class="profile-list">
-                    <div>
-                        <img class="profile-image" />
-                    </div>
-                    <div>
-                        <h2>Hayley Kim</h2>
-
-                        <button class="message-button">
-                            <h4>Message</h4>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="client-container">
-                <div class="profile-list">
-                    <div>
-                        <img class="profile-image" />
-                    </div>
-                    <div>
-                        <h2>Hayley Kim</h2>
-
+                        <h2>{{item.name}}</h2>
+    
                         <button class="message-button">
                             <h4>Message</h4>
                         </button>
@@ -119,5 +60,10 @@
                 </div>
             </div>
         </div>
+
+        <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/trainer/home/clientlist.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/nav.js"></script>
     </body>
 </html>

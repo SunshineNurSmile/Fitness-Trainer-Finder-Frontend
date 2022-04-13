@@ -4,14 +4,37 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/css/trainee/connection/trainercard.css">
+        <link rel="stylesheet" href="/css/trainee/nav.css">
+        <link rel="stylesheet" href="/css/trainee/connection/yourtrainer.css">
         <title>Trainer Card</title>
     </head>
 
     <body>
         <div class="container" id="app">
-            <div class="back-div">
-                <img class="back-button" src="/images/back-trainee.png" alt="back button" @click="back()">
+            <div class="navdiv">
+                <img class = "menu" src="/images/menu-button.svg" alt="menu-button"/>
+                
+                <nav>
+                    <img class="close" src="/images/close-button.svg" alt="close-button"/>
+            
+                    <ul class="navul">
+                        <li class="navli">
+                            <a class="nava" href="/html/trainee/home/homepage.html">Home</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="/html/trainee/account/accountPage.html">Your Profile</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="/html/trainee/account/editProfile.html">Edit Profile</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="#">Chats</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" onclick="localStorage.clear();" href="/html/index.html">Log out</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
 
             <div class="avatar-div">
@@ -31,10 +54,15 @@
                 </div>
 
                 <div class="request-button">
-                    <button @click="requestMsg()">
-                        <h3>Request Message</h3>
+                    <button @click="start_chat()">
+                        <h3>Chat</h3>
                     </button>
                 </div>
+            </div>
+
+            <div class="payment-tier">
+                Paid Price: {{ price }}
+                Days Remaining: {{ days }}
             </div>
 
             <video class="video" controls>
@@ -50,14 +78,11 @@
                 <div class="img"><img :src="img5"></div>
                 <div class="img"><img :src="img6"></div>
             </div>
-    
-            <div class="payment-tier">
-                <button class="payment-button" @click="jump_to_tiers()">View Payment Plans</button>
-            </div>
         </div>
 
         <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
         <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
-        <script src="/js/trainee/connection/trainercard.js"></script>
+        <script src="/js/trainee/connection/yourtrainer.js"></script>
+        <script src="/js/nav.js"></script>
     </body>
 </html>

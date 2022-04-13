@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,15 +9,26 @@
 }
 
 body {
-    font-family: "Avenir";
-    src: url("../fonts/Avenir.eot?#iefix") format("embedded-opentype"), url("../fonts/Avenir.woff") format("woff"), url("../fonts/Avenir.ttf") format("truetype"), url("../fonts/Avenir.svg#Avenir") format("svg");
+    font-family: 'Montserrat', sans-serif;
     height: -webkit-fill-available;
     background-color: #90b4c0;
 }
 
+.back-div {
+    height: 60px;
+    background-color: #395b64;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+.back-button {
+    height: 30px;
+    width: 30px;
+}
+
 .top-container {
     width: 100vw;
-    height: 17vh;
+    height: 14vh;
     background-color: #395b64;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
@@ -44,8 +57,8 @@ body {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     padding: 10px 20px;
     margin-top: 20px;
-    width: 300px;
-    height: 240px;
+    width: 90vw;
+    height: 35vh;
     color: black;
     border-radius: 10px;
     background-color: white;
@@ -58,31 +71,67 @@ body {
     flex-direction: row;
 }
 
-.choose-button {
+input {
+    width: 25vw;
+    font-size: 1.7rem;
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 5px;
+}
+
+input:focus {
+    outline: none !important;
+}
+
+.plan-description {
     display: flex;
     justify-content: center;
     color: #395b64;
     padding-top: 10px;
-}
-
-.choose-button button {
-    color: white;
-    background-color: #395b64;
-    padding: 6px 30px;
-    border: none;
-    border-radius: 8px;
-    font-style: italic;
+    font-size: large;
 }
 
 .tier-info {
-    padding-top: 20px;
+    margin-top: 1rem;
+    text-align: center;
 }
 
 .tier-info p {
     font-size: 90%;
     font-style: normal;
+    margin-top: 1rem;
 }
 
 .tier-info i {
     color: #395b64;
+}
+
+textarea {
+    width: 75vw;
+    height: 16vh;
+    padding: 5px 5px;
+    border-radius: 10px;
+}
+textarea:focus {
+    outline: none !important;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+button {
+    width: 40vw;
+    background-color: #fbd6d2;
+	border: none;
+	border-radius: 10px;
+	color: rgba(0, 0, 0, 0.829);
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 15px;
+	margin: 4px 1px;
 }

@@ -15,57 +15,6 @@ body {
     line-height: 1.5;
 }
 
-/* Navigation Bar */
-.menu {
-    width: 30px;
-    height: 30px;
-}
-
-.close {
-    width: 30px;
-    height: 30px;
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
-nav {
-    position: fixed;
-    left: 10px;
-    top: 10px;
-    height: 50vh;
-    width: 50vw;
-    border-radius: 8px;
-    background: #f5989d;
-    box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    text-transform: uppercase;
-    transform: translateX(-150%);
-    transition: transform 0.5s ease-in-out;
-}
-
-.navul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 50px;
-}
-
-.nava {
-    text-decoration: none;
-    color: white;
-    padding: 1.5em;
-    display: block;
-}
-
-.nava:hover {
-    background: rgb(235, 235, 235);
-    color: black;
-}
-
-.open-nav {
-    transform: translateX(0%);
-}
-/* End of Navigation Bar */
-
 .edit-profile {
     background-color: #395b64;
 }
@@ -80,7 +29,6 @@ nav {
 }
 
 .outerdiv {
-    padding: 30px;
     height: 90vh;
 }
 
@@ -98,6 +46,8 @@ nav {
     margin-top: 20px;
     text-align: center;
     color: white;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .dropdown {
@@ -160,6 +110,11 @@ input:focus {
     border-radius: 8px;
     padding: 5px 8px;
     margin-top: 10px;
+}
+
+textarea {
+    width: 80vw;
+    height: 20vh;
 }
 
 textarea:focus {

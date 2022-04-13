@@ -8,42 +8,48 @@
     box-sizing: border-box;
 }
 
+html {
+    height: -webkit-fill-available;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     height: -webkit-fill-available;
-    background-color: #90b4c0;
 }
 
 button {
     font-family: inherit;
 }
 
-.top-container {
-    width: 100vw;
-    height: 45vh;
+.navdiv {
+    text-align: start;
+}
+
+.menu {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.container {
+    width: 100%;
+    height: auto;
     background-color: #395b64;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     padding: 20px;
 }
 
 .profile-image {
     width: 20vh;
     height: 20vh;
-    background-color: #90b4c0;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid #90b4c0;
+    border: 2px solid #f5989d;
 }
 
 .bio-box {
-    margin-top: 22.5vh;
     background-color: white;
     width: 90vw;
-    height: 30vh;
-    position: absolute;
+    height: 36vh;
     border-radius: 20px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
@@ -64,33 +70,71 @@ button {
 }
 
 .about-text {
-    margin: 0 30px 0 30px;
+    width: 100%;
+    height: 19vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
-.bottom-container {
-    margin-top: 55vh;
-    position: absolute;
-    width: 90vw;
-    padding-bottom: 100px;
+.description {
+    font-size: 0.8rem;
+}
+
+.request-button {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+}
+
+.request-button button {
+    width: 50vw;
+    height: 3rem;
+    background-color: #f5989d;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-size: 15px;
+    margin: 9px 1px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .trainer-images {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 0.5rem;
 }
 
 .trainer-images img {
-    background-color: #fbd6d2;
-    height: 110px;
-    width: 110px;
+    background-color: #f5989d;
+    height: 28vw;
+    width: 28vw;
+    border: 1px solid #f5989d;
     border-radius: 15px;
     margin: 5px 0 5px 0;
     object-fit: cover;
+
 }
 
 .video {
+    margin-top: 1rem;
+}
+
+video {
     width: 100%;
     border-radius: 10px;
-    margin-bottom: 15px;
+}
+
+.payment-tier {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.payment-button {
+    width: 60vw;
+    height: 3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #f5989d;
+    font-size: 15px;
 }

@@ -5,10 +5,6 @@
     padding: 0;
 }
 
-html {
-    height: -webkit-fill-available;
-}
-
 body {
     font-family: 'Montserrat', sans-serif;
     height: -webkit-fill-available;
@@ -16,15 +12,14 @@ body {
 
 .profile-list {
     height: 15vh;
-    width: 100vw;
-    padding: 20px 0 20px 0;
+    width: 100%;
     background-color: white;
     border-top: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
-    border-radius: 8px;
+    position: relative;
+    z-index: 3;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
 }
 
 .profile-image {
@@ -33,10 +28,15 @@ body {
     background-color: #90b4c0;
     object-fit: cover;
     border-radius: 50%;
+    margin: 0 4vw;
 }
 
-.message-button {
-    background-color: #f5989d;
+.info {
+    margin-left: 2rem;
+}
+
+.chat-button {
+    background-color: #fbd6d2;
     border: none;
     border-radius: 10px;
     color: rgba(0, 0, 0, 0.829);
@@ -45,4 +45,10 @@ body {
     text-decoration: none;
     font-size: 15px;
     margin: 4px 1px;
+}
+
+.chat-button h4 {
+    font-weight: 500;
+    letter-spacing: 1px;
+    transform: scale(1.2, 1.2);
 }

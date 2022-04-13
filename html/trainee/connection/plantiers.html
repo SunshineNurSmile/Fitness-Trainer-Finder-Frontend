@@ -4,112 +4,80 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Payment Tier options</title>
         <link rel="stylesheet" href="/css/trainee/connection/plantiers.css"/>
+        <title>Payment Tier options</title>
     </head>
 
     <script src="https://kit.fontawesome.com/545d8eda61.js" crossorigin="anonymous"></script>
     <body>
-        <div class="top-container">
-            <h1>Choose your plan</h1>
-        </div>
-
-        <div class="bottom-container"></div>
-
-        <div class="payment-padding">
-            <div class="payment-container">
-                <h2>Tier 1</h2>
-
-                <div class="pricing">
-                    <h1>&nbsp; $1</h1>
-                    <p>&nbsp; per month</p>
-
-                </div>
-
-                <div class="choose-button">
-                    <button onClick="window.location.href='/html/trainee/connection/tierdetail.html'" >Choose this option</button>
-                </div>
-
-                <div class="tier-info">
-                    <p>
-                        <i class="fa-solid fa-atom"></i>
-                        &nbsp;Free access to basic tutorials
-                    </p>
-
-                    <p>
-                        <i class="fa-solid fa-atom"></i>
-                        &nbsp;Free workout consultations
-                    </p>
-
-                    <p>
-                        <i class="fa-solid fa-atom"></i>
-                        &nbsp;Free starter meal program
-                    </p>
-                </div>
+        <div class="outer-div" id="app">
+            <div class="back-div">
+                <img class="back-button" src="/images/back-trainee.png" alt="back button" @click="back()">
             </div>
 
-            <div class="payment-container">
-                <h2>Tier 2</h2>
-
-                <div class="pricing">
-                    <h1>&nbsp; $100</h1>
-                    <p>&nbsp; per month</p>
-                </div>
-
-                <div class="choose-button">
-                    <button onClick="window.location.href='/html/trainee/connection/tierdetail.html'" >Choose this option</button>
-                </div>
-
-                <div class="tier-info">
-                    <p>
-                        <i class="fa-solid fa-atom"></i>
-                        &nbsp;10 training sessions
-                    </p>
-
-                    <p>
-                        <i class="fa-solid fa-atom"></i>
-                        &nbsp;Personalized workout program
-                    </p>
-
-                    <p>
-                        <i class="fa-solid fa-atom"></i>
-                        &nbsp;Personlized meal program
-                    </p>
-                </div>
+            <div class="top-container">
+                <h1>Choose your plan</h1>
             </div>
-
-            <div class="payment-container">
-                <h2>Tier 3</h2>
-
-                <div class="pricing">
-                    <h1>&nbsp; $200</h1>
-                    <p>&nbsp; per month</p>
+    
+            <div class="payment-padding">
+                <div class="payment-container">
+                    <h2>Free</h2>
+    
+                    <div class="pricing">
+                        <h1>&nbsp; $0</h1>
+                        <p>&nbsp; one week</p>
+    
+                    </div>
+    
+                    <div class="choose-button">
+                        <button onClick="window.location.href='/html/trainee/connection/tierdetail.html'" >Choose this option</button>
+                    </div>
+    
+                    <div class="tier-info">
+                        {{ description1 }}
+                    </div>
                 </div>
-
-                <div class="choose-button">
-                    <button onClick="window.location.href='/html/trainee/connection/tierdetail.html'" >Choose this option</button>
+    
+                <div class="payment-container">
+                    <h2>Basic</h2>
+    
+                    <div class="pricing">
+                        <h1>&nbsp; ${{ price2 }}</h1>
+                        <p>&nbsp; per month</p>
+                    </div>
+    
+                    <div class="choose-button">
+                        <button onClick="window.location.href='/html/trainee/connection/tierdetail.html'" >Choose this option</button>
+                    </div>
+    
+                    <div class="tier-info">
+                        {{ description2 }}
+                    </div>
                 </div>
-
-                <div class="tier-info">
-                    <p>
-                        <i class="fa-solid fa-atom"></i>
-                        &nbsp;20 training sessions
-                    </p>
-
-                    <p>
-                        <i class="fa-solid fa-atom"></i>
-                        &nbsp;Personalized workout program
-                    </p>
-
-                    <p>
-                        <i class="fa-solid fa-atom"></i>
-                        &nbsp;Personlized meal program
-                    </p>
+    
+                <div class="payment-container">
+                    <h2>Premium</h2>
+    
+                    <div class="pricing">
+                        <h1>&nbsp; ${{ price3 }}</h1>
+                        <p>&nbsp; per month</p>
+                    </div>
+    
+                    <div class="choose-button">
+                        <button onClick="window.location.href='/html/trainee/connection/tierdetail.html'" >Choose this option</button>
+                    </div>
+    
+                    <div class="tier-info">
+                        {{ description3 }}
+                    </div>
                 </div>
+                <div class="margin"></div>
             </div>
         </div>
+    
         <script src="https://www.paypal.com/sdk/js?client-id=AQVuOYzchNueHgr-SnfySPXWwo0vOfUTvH4X69bDvGhlTGbBkNBv86kDIq-u-QaLlDDIWSQQZyvgVbzb"></script>
-
-    <script src="/js/trainee/connection/plantiers.js"></script>
+        <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/trainee/connection/plantiers.js"></script>
     </body>
 </html>

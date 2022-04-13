@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/trainer/nav.css">
+        <link rel="stylesheet" href="/css/trainer/account/paymentPlans.css"/>
+        <title>Payment Plans</title>
+    </head>
+
+    <script src="https://kit.fontawesome.com/545d8eda61.js" crossorigin="anonymous"></script>
+    <body>
+        <div id="app">
+            <div class="navdiv">
+                <img class = "menu" src="/images/menu.png" alt="menu-button"/>
+                
+                <nav>
+                    <img class="close" src="/images/close.png" alt="close-button"/>
+            
+                    <ul class="navul">
+                        <li class="navli">
+                            <a class="nava" href="/html/trainer/home/clientlist.html">Your Clients</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="/html/trainer/account/accountPage.html">Your Profile</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="/html/trainer/account/editProfile.html">Edit Profile</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="/html/trainer/connection/receipt.html">Income</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="/html/trainer/connection/connection.html">Chats</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" onclick="localStorage.clear();" href="/html/index.html">Log Out</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="top-container">
+                <h1>Your Payment Plans</h1>
+            </div>
+    
+            <div class="payment-padding">
+                <div class="edit-button">
+                    <button class="button" @click="editPayment()">Edit Payment Plans</button>
+                </div>
+                
+                <div class="payment-container">
+                    <h2>Free</h2>
+    
+                    <div class="pricing">
+                        <h1>&nbsp; $0</h1>
+                        <p>&nbsp; per month</p>
+                    </div>
+    
+                    <div class="plan-detail">
+                        Plan Description:
+                    </div>
+    
+                    <div class="tier-info">
+                        <p>{{ description1 }}</p>
+                    </div>
+                </div>
+    
+                <div class="payment-container">
+                    <h2>Basic</h2>
+    
+                    <div class="pricing">
+                        <h1>&nbsp; ${{ price2 }}</h1>
+                        <p>&nbsp; per month</p>
+                    </div>
+    
+                    <div class="plan-detail">
+                        Plan Description:
+                    </div>
+    
+                    <div class="tier-info">
+                        <p>{{ description2 }}</p>
+                    </div>
+                </div>
+    
+                <div class="payment-container">
+                    <h2>Premium</h2>
+    
+                    <div class="pricing">
+                        <h1>&nbsp; ${{ price3 }}</h1>
+                        <p>&nbsp; per month</p>
+                    </div>
+    
+                    <div class="plan-detail">
+                        Plan Description:
+                    </div>
+    
+                    <div class="tier-info">
+                        <p>{{ description3 }}</p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <script src="/js/jquery.js"></script>
+        <script src="/js/vue.js"></script>
+        <script src="/js/trainer/account/paymentPlans.js"></script>
+        <script src="/js/nav.js"></script>
+    </body>
+</html>

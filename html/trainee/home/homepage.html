@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/css/trainee/home/homepage.css" />    
-        <script src="https://kit.fontawesome.com/610c7ab415.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/trainee/nav.css">
+        <link rel="stylesheet" href="/css/trainee/home/homepage.css" />
         <title>Homepage</title>
     </head>   
 
@@ -13,19 +13,25 @@
         <div id="app">
             <div class="navdiv">
                 <img class = "menu" src="/images/menu-button.svg" alt="menu-button"/>
-    
+                
                 <nav>
                     <img class="close" src="/images/close-button.svg" alt="close-button"/>
             
                     <ul class="navul">
                         <li class="navli">
-                            <a class="nava" href="/html/trainee/account/accountPage.html">Profile Page</a>
+                            <a class="nava" href="/html/trainee/account/accountPage.html">Your Profile</a>
                         </li>
                         <li class="navli">
-                            <a class="nava" href="#">Your Trainer</a>
+                            <a class="nava" href="/html/trainee/account/editProfile.html">Edit Profile</a>
                         </li>
                         <li class="navli">
-                            <a class="nava" href="#">Payments</a>
+                            <a class="nava" href="/html/trainee/connection/yourtrainer.html">Your Trainer</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="#">Chats</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" onclick="localStorage.clear();" href="/html/index.html">Log out</a>
                         </li>
                     </ul>
                 </nav>
@@ -36,9 +42,9 @@
             </div>
 
             <div class="button-container">
-                <button class="style-button" @click="open_Styles()">Styles</button>
+                <button class="style-button" @click="open_Styles()" v-bind:style="Styles ? 'background-color: #f5989d;': 'background-color: white;' ">Styles</button>
                 <div class="space"></div>
-                <button class="trainer-button" @click="open_Trainers()">Trainers</button>
+                <button class="trainer-button" @click="open_Trainers()" v-bind:style="Trainers ? 'background-color: #f5989d;': 'background-color: white;' ">Trainers</button>
             </div>
 
             <div class="iframe_div" v-if="Styles">
@@ -49,8 +55,9 @@
                 <iframe src="/html/trainee/home/iframe/trainers.html"> </iframe>
             </div>
         </div>
-
+        
         <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
         <script src="/js/trainee/home/homepage.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/nav.js" type="text/javascript" charset="utf-8"></script>
     </body>
 </html>

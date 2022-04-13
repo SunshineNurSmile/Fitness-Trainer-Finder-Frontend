@@ -9,164 +9,26 @@
     </head>
 
     <body>
-        <div class="client-container">
-            <div class="profile-list">
-                <div>
-                    <img class="profile-image" />
-                </div>
-                <div>
-                    <h2>Hayley Kim</h2>
-                    <p>Yoga Coach</p>
-
-                    <button class="message-button">
-                        <h4>Message</h4>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="client-container">
-            <div class="profile-list">
-                <div>
-                    <img class="profile-image" />
-                </div>
-                <div>
-                    <h2>Hayley Kim</h2>
-                    <p>Yoga Coach</p>
-
-                    <button class="message-button">
-                        <h4>Message</h4>
-                    </button>
+        <div id="app">
+            <div class="client-container" v-for="(item,index) in information" :key="index">
+                <div class="profile-list">
+                    <div>
+                        <img class="profile-image" :src="item.avatar" alt="pic"/>
+                    </div>
+                    <div>
+                        <h2>{{item.name}}</h2>
+                        <p>{{item.training_style}} Coach</p>
+    
+                        <button class="message-button" @click="viewProfile(item._id)">
+                            <h4>View Profile</h4>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="client-container">
-            <div class="profile-list">
-                <div>
-                    <img class="profile-image" />
-                </div>
-                <div>
-                    <h2>Hayley Kim</h2>
-                    <p>Yoga Coach</p>
-
-                    <button class="message-button">
-                        <h4>Message</h4>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="client-container">
-            <div class="profile-list">
-                <div>
-                    <img class="profile-image" />
-                </div>
-                <div>
-                    <h2>Hayley Kim</h2>
-                    <p>Yoga Coach</p>
-
-                    <button class="message-button">
-                        <h4>Message</h4>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="client-container">
-            <div class="profile-list">
-                <div>
-                    <img class="profile-image" />
-                </div>
-                <div>
-                    <h2>Hayley Kim</h2>
-                    <p>Yoga Coach</p>
-
-                    <button class="message-button">
-                        <h4>Message</h4>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="client-container">
-            <div class="profile-list">
-                <div>
-                    <img class="profile-image" />
-                </div>
-                <div>
-                    <h2>Hayley Kim</h2>
-                    <p>Yoga Coach</p>
-
-                    <button class="message-button">
-                        <h4>Message</h4>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="client-container">
-            <div class="profile-list">
-                <div>
-                    <img class="profile-image" />
-                </div>
-                <div>
-                    <h2>Hayley Kim</h2>
-                    <p>Yoga Coach</p>
-
-                    <button class="message-button">
-                        <h4>Message</h4>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="client-container">
-            <div class="profile-list">
-                <div>
-                    <img class="profile-image" />
-                </div>
-                <div>
-                    <h2>Hayley Kim</h2>
-                    <p>Yoga Coach</p>
-
-                    <button class="message-button">
-                        <h4>Message</h4>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="client-container">
-            <div class="profile-list">
-                <div>
-                    <img class="profile-image" />
-                </div>
-                <div>
-                    <h2>Hayley Kim</h2>
-                    <p>Yoga Coach</p>
-
-                    <button class="message-button">
-                        <h4>Message</h4>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="client-container">
-            <div class="profile-list">
-                <div>
-                    <img class="profile-image" />
-                </div>
-                <div>
-                    <h2>Hayley Kim</h2>
-                    <p>Yoga Coach</p>
-
-                    <button class="message-button">
-                        <h4>Message</h4>
-                    </button>
-                </div>
-            </div>
-        </div>
+        <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/trainee/home/iframe/trainers.js"></script>
     </body>
 </html>

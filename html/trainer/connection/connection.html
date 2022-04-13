@@ -5,11 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/css/trainer/nav.css">
-        <link rel="stylesheet" href="/css/trainer/account/accountPage.css">
-        <title>Trainer account page</title>
+        <link rel="stylesheet" href="/css/trainer/connection/connection.css" />
+        <title>Document</title>
     </head>
+    <script src="https://kit.fontawesome.com/545d8eda61.js" crossorigin="anonymous"></script>
 
-    <body>        
+    <body>
         <div id="app">
             <div class="navdiv">
                 <img class = "menu" src="/images/menu.png" alt="menu-button"/>
@@ -22,6 +23,9 @@
                             <a class="nava" href="/html/trainer/home/clientlist.html">Your Clients</a>
                         </li>
                         <li class="navli">
+                            <a class="nava" href="/html/trainer/account/accountPage.html">Your Profile</a>
+                        </li>
+                        <li class="navli">
                             <a class="nava" href="/html/trainer/account/editProfile.html">Edit Profile</a>
                         </li>
                         <li class="navli">
@@ -31,54 +35,44 @@
                             <a class="nava" href="/html/trainer/connection/receipt.html">Income</a>
                         </li>
                         <li class="navli">
-                            <a class="nava" href="/html/trainer/connection/connection.html">Chats</a>
-                        </li>
-                        <li class="navli">
                             <a class="nava" onclick="localStorage.clear();" href="/html/index.html">Log Out</a>
                         </li>
                     </ul>
                 </nav>
             </div>
-    
+
             <div class="top-container">
-                <div>
-                    <!-- add profile image -->
-                    <img class="profile-image" :src="avatar"/>
-                </div>
+                <h1>Connections</h1>
+            </div>
     
-                <div class="bio-box">
-                    <div class="bio-text">
-                        <h1>{{ name }}</h1>
-                        <h3>{{ style }}</h3>
+            <div class="centerize">
+                <div class="button-container">
+                    <div class="likes-container" @click="open_requests()" v-bind:style=" requests ? 'background-color: lightgray;' : 'background-color: white;'">
+                        <i class="fa-solid fa-heart fa-1x"></i>
+                        <h1>&nbspRequests</h1>
                     </div>
-    
-                    <div class="about-text">
-                        <h3><b>About</b></h3>
-                        <h3>{{ description }}</h3>
+                    <div class="chats-container" @click="open_chats()" v-bind:style=" chats ? 'background-color: lightgray;' : 'background-color: white;' ">
+                        <i class="fa-solid fa-comment-dots fa-1x"></i>
+                        <h1>&nbspChats</h1>
                     </div>
                 </div>
+            </div>
     
-                <div class="bottom-container">
-                    <video class="video" controls>
-                        <source v-if="videourl" :src="videourl" type="video/mp4">
-                    </video>
-    
-                    <div class="trainer-images">
-                        <!-- add photos here -->
-                        <img :src="img1"/>
-                        <img :src="img2"/>
-                        <img :src="img3"/>
-                        <img :src="img4"/>
-                        <img :src="img5"/>
-                        <img :src="img6"/>
-                    </div>
+            <div class="bottom-container">
+                <!-- this is the light blue background -->
+                <div class="iframe_div" v-if="requests">
+                    <iframe src="/html/trainer/connection/iframe/requests.html"></iframe>
+                </div>
+        
+                <div class="iframe_div" v-if="chats">
+                    <iframe src="/html/trainer/connection/iframe/chats.html"></iframe>
                 </div>
             </div>
         </div>
 
         <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
         <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
-        <script src="/js/trainer/account/accountPage.js" type="text/javascript" charset="utf-8"></script>
-        <script src="/js/nav.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/trainer/connection/connection.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/nav.js"></script>
     </body>
 </html>

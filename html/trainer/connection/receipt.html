@@ -4,132 +4,76 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/trainer/nav.css">
         <link rel="stylesheet" href="/css/trainer/connection/receipt.css" />
         <title>Receipts</title>
     </head>
 
     <body>
-        <div class="sticky">
-            <div class="top-container">
-                <h1>Hayley Kim</h1>
-                <h3>ID: ABC12345</h3>
+        <div id="app">
+            <div class="navdiv">
+                <img class = "menu" src="/images/menu.png" alt="menu-button"/>
+                
+                <nav>
+                    <img class="close" src="/images/close.png" alt="close-button"/>
+            
+                    <ul class="navul">
+                        <li class="navli">
+                            <a class="nava" href="/html/trainer/home/clientlist.html">Your Clients</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="/html/trainer/account/accountPage.html">Your Profile</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="/html/trainer/account/editProfile.html">Edit Profile</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="/html/trainer/account/paymentPlans.html">Plan Tiers</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" href="/html/trainer/connection/connection.html">Chats</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" onclick="localStorage.clear();" href="/html/index.html">Log Out</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
 
-            <div class="centerize-earning">
-                <div class="earning-container">
-                    <div class="earning-text">
-                        <h3>Your Earnings:</h3>
-                    </div>
-
-                    <div class="earning-amount">
-                        <div class="earning-rectangle">
-                            <h1>$2,000</h1>
+            <div class="sticky">
+                <div class="top-container">
+                    <h1>Hayley Kim</h1>
+                    <h3>ID: ABC12345</h3>
+                </div>
+    
+                <div class="centerize-earning">
+                    <div class="earning-container">
+                        <div class="earning-text">
+                            <h3>Your Earnings:</h3>
+                        </div>
+    
+                        <div class="earning-amount">
+                            <div class="earning-rectangle">
+                                <h1>$2,000</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="receipt-container">
-            <div class="receipt-box">
-                <div class="receipt-id">
-                    <h3>Receipt 1:</h3>
-                </div>
-
-                <div class="receipt-amount">
-                    <h3>$500</h3>
-                </div>
-            </div>
-
-            <div class="receipt-box">
-                <div class="receipt-id">
-                    <h3>Receipt 1:</h3>
-                </div>
-
-                <div class="receipt-amount">
-                    <h3>$500</h3>
-                </div>
-            </div>
-
-            <div class="receipt-box">
-                <div class="receipt-id">
-                    <h3>Receipt 1:</h3>
-                </div>
-
-                <div class="receipt-amount">
-                    <h3>$500</h3>
-                </div>
-            </div>
-
-            <div class="receipt-box">
-                <div class="receipt-id">
-                    <h3>Receipt 1:</h3>
-                </div>
-
-                <div class="receipt-amount">
-                    <h3>$500</h3>
-                </div>
-            </div>
-
-            <div class="receipt-box">
-                <div class="receipt-id">
-                    <h3>Receipt 1:</h3>
-                </div>
-
-                <div class="receipt-amount">
-                    <h3>$500</h3>
-                </div>
-            </div>
-
-            <div class="receipt-box">
-                <div class="receipt-id">
-                    <h3>Receipt 1:</h3>
-                </div>
-
-                <div class="receipt-amount">
-                    <h3>$500</h3>
-                </div>
-            </div>
-
-            <div class="receipt-box">
-                <div class="receipt-id">
-                    <h3>Receipt 1:</h3>
-                </div>
-
-                <div class="receipt-amount">
-                    <h3>$500</h3>
-                </div>
-            </div>
-
-            <div class="receipt-box">
-                <div class="receipt-id">
-                    <h3>Receipt 1:</h3>
-                </div>
-
-                <div class="receipt-amount">
-                    <h3>$500</h3>
-                </div>
-            </div>
-
-            <div class="receipt-box">
-                <div class="receipt-id">
-                    <h3>Receipt 1:</h3>
-                </div>
-
-                <div class="receipt-amount">
-                    <h3>$500</h3>
-                </div>
-            </div>
-
-            <div class="receipt-box">
-                <div class="receipt-id">
-                    <h3>Receipt 1:</h3>
-                </div>
-
-                <div class="receipt-amount">
-                    <h3>$500</h3>
+    
+            <div class="receipt-container">
+                <div class="receipt-box">
+                    <div class="receipt-id">
+                        <h3>Receipt 1:</h3>
+                    </div>
+    
+                    <div class="receipt-amount">
+                        <h3>$500</h3>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <script src="/js/nav.js"></script>
     </body>
 </html>

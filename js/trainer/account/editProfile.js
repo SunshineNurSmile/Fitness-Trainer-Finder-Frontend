@@ -38,9 +38,6 @@ var app = new Vue({
                         if (rs.trainer.description != null) {
                             this_.description = rs.trainer.description;
                         }
-                        else {
-                            this_.description = "Please edit your description here!";
-                        }
 
                         if (rs.trainer.avatar != null) {
                             this_.avatar = rs.trainer.avatar;
@@ -244,15 +241,3 @@ var app = new Vue({
         }
     },
 })
-
-const menu = document.querySelector(".menu");
-const close = document.querySelector(".close");
-const nav = document.querySelector("nav");
-
-menu.addEventListener("click", () => {
-    nav.classList.add("open-nav");
-});
-
-close.addEventListener("click", () => {
-    nav.classList.remove("open-nav");
-});

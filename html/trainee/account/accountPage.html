@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/css/trainee/account/accountPage.css" />
+        <link rel="stylesheet" href="/css/trainee/nav.css">
         <script src="https://kit.fontawesome.com/610c7ab415.js" crossorigin="anonymous"></script>
         <title>Acount Page</title>
     </head>
@@ -19,16 +20,19 @@
             
                     <ul class="navul">
                         <li class="navli">
-                            <a class="nava" href="/html/trainee/home/homepage.html">Home Page</a>
+                            <a class="nava" href="/html/trainee/home/homepage.html">Home</a>
                         </li>
                         <li class="navli">
                             <a class="nava" href="/html/trainee/account/editProfile.html">Edit Profile</a>
                         </li>
                         <li class="navli">
-                            <a class="nava" href="#">Your Trainer</a>
+                            <a class="nava" href="/html/trainee/connection/yourtrainer.html">Your Trainer</a>
                         </li>
                         <li class="navli">
-                            <a class="nava" href="#">Payments</a>
+                            <a class="nava" href="#">Chats</a>
+                        </li>
+                        <li class="navli">
+                            <a class="nava" onclick="localStorage.clear();" href="/html/index.html">Log out</a>
                         </li>
                     </ul>
                 </nav>
@@ -65,5 +69,6 @@
         <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
         <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
         <script src="/js/trainee/account/accountPage.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/nav.js" type="text/javascript" charset="utf-8"></script>
     </body>
 </html>

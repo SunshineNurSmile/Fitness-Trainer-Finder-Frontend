@@ -11,25 +11,15 @@
 body {
     font-family: 'Montserrat', sans-serif;
     height: -webkit-fill-available;
-    background-color: #395b64;
-}
-
-.back-div {
-    width: auto;
-    height: 30px;
-    text-align: start;
-    padding: 30px;
-}
-
-.back-button {
-    height: 30px;
-    width: 30px;
+    background-color: #90b4c0;
 }
 
 .top-container {
     width: 100vw;
-    height: 12vh;
+    height: 14vh;
     background-color: #395b64;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,24 +33,40 @@ body {
     font-size: 1.7rem;
 }
 
+.edit-button {
+    width: 80vw;
+    height: auto;
+    text-align: center;
+}
+
+button {
+    width: 50vw;
+    background-color: #fbd6d2;
+	border: none;
+	border-radius: 10px;
+	color: rgba(0, 0, 0, 0.829);
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 15px;
+	margin: 4px 1px;
+}
+
 .payment-padding {
-    padding-top: 14vh;
+    padding-top: 17vh;
+    height: auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-}
-
-.payment-tiers{
-    width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .payment-container {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     padding: 10px 20px;
     margin-top: 20px;
-    width: 80vw;
+    width: 90vw;
     height: auto;
     color: black;
     border-radius: 10px;
@@ -74,35 +80,23 @@ body {
     flex-direction: row;
 }
 
-.choose-button {
+.plan-detail {
     display: flex;
     justify-content: center;
     color: #395b64;
     padding-top: 10px;
-}
-
-.choose-button button {
-    color: white;
-    background-color: #395b64;
-    padding: 6px 30px;
-    border: none;
-    border-radius: 8px;
-    font-style: italic;
+    font-size: large;
 }
 
 .tier-info {
-    padding-top: 20px;
+    padding: 5px 5px;
+    margin-top: 1rem;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
 }
 
 .tier-info p {
     font-size: 90%;
     font-style: normal;
-}
-
-.tier-info i {
-    color: #395b64;
-}
-
-.margin {
-    margin-bottom: 3rem;
 }

@@ -22,7 +22,7 @@ body {
 
 .top-container {
     width: 100vw;
-    height: 28vh;
+    height: 24vh;
     padding: 0 0 50px 40px;
     color: white;
     background-color: #395b64;
@@ -41,7 +41,7 @@ body {
 }
 
 .earning-container {
-    margin-top: 20vh;
+    margin-top: 16vh;
     width: 330px;
     height: 15vh;
     border-radius: 10px;

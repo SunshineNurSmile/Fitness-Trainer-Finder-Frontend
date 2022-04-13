@@ -72,23 +72,23 @@ var app = new Vue({
                             this_.img1 = rs.trainer.image1;
                         }
 
-                        if (rs.trainer.image1 != null) {
+                        if (rs.trainer.image2 != null) {
                             this_.img2 = rs.trainer.image2;
                         }
 
-                        if (rs.trainer.image1 != null) {
+                        if (rs.trainer.image3 != null) {
                             this_.img3 = rs.trainer.image3;
                         }
 
-                        if (rs.trainer.image1 != null) {
+                        if (rs.trainer.image4 != null) {
                             this_.img4 = rs.trainer.image4;
                         }
 
-                        if (rs.trainer.image1 != null) {
+                        if (rs.trainer.image5 != null) {
                             this_.img5 = rs.trainer.image5;
                         }
 
-                        if (rs.trainer.image1 != null) {
+                        if (rs.trainer.image6 != null) {
                             this_.img6 = rs.trainer.image6;
                         }
                     }
@@ -100,15 +100,3 @@ var app = new Vue({
         }
     }
 })
-
-const menu = document.querySelector(".menu");
-const close = document.querySelector(".close");
-const nav = document.querySelector("nav");
-
-menu.addEventListener("click", () => {
-    nav.classList.add("open-nav");
-});
-
-close.addEventListener("click", () => {
-    nav.classList.remove("open-nav");
-});
