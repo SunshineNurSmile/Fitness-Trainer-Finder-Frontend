@@ -28,7 +28,7 @@
                             <a class="nava" href="/html/trainee/account/editProfile.html">Edit Profile</a>
                         </li>
                         <li class="navli">
-                            <a class="nava" href="#">Chats</a>
+                            <a class="nava" href="/html/trainee/connection/chatlist.html">Chats</a>
                         </li>
                         <li class="navli">
                             <a class="nava" onclick="localStorage.clear();" href="/html/index.html">Log out</a>
@@ -60,10 +60,10 @@
                 </div>
             </div>
 
-            <div class="payment-tier">
+            <!-- <div class="payment-tier">
                 Paid Price: {{ price }}
                 Days Remaining: {{ days }}
-            </div>
+            </div> -->
 
             <video class="video" controls>
                 <source v-if="videourl" :src="videourl" type="video/mp4">

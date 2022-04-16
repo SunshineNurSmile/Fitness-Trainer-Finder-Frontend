@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/trainee/connection/chatlistitems.css">
+		<title>Your Chats</title>
+	</head>
+	<script src="https://kit.fontawesome.com/545d8eda61.js" crossorigin="anonymous"></script>
+
+	<body>
+		<div class="outer-div" id="app">	
+			<div class="row" v-for="(item,index) in information" :key="index">	
+				<div class="profile-list">
+					<div>
+                        <img class="profile-image" :src="item.avatar" alt="pic"/>
+                    </div>
+					<div>
+						<h2>{{ item.name }}</h2>
+						<button class="chat-button" @click="start_chat(item.trainer)">
+							<h4>Chat</h4>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/js/trainee/connection/chatlistitems.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

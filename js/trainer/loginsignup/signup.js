@@ -15,6 +15,18 @@ var app = new Vue({
                 return;
             }
 
+            if (!this.email.includes("@") || !this.email.includes(".")) {
+                alert("Please enter a valid email address.");
+                location.reload();
+                return;
+            }
+
+            if (this.password.length < 8) {
+                alert("Please enter a stronger password");
+                location.reload();
+                return;
+            }
+
             var datas = {};
             datas.first_name = this.Fname;
             datas.last_name = this.Lname;
