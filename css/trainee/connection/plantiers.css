@@ -92,15 +92,9 @@ body {
 
 .tier-info {
     padding-top: 20px;
-}
-
-.tier-info p {
-    font-size: 90%;
-    font-style: normal;
-}
-
-.tier-info i {
-    color: #395b64;
+    padding-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: 200;
 }
 
 .margin {

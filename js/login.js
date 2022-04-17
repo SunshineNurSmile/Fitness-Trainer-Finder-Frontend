@@ -32,7 +32,7 @@ var app = new Vue({
                             console.log(rs);
                             window.localStorage.setItem('token', rs.token);
                             alert("Login successful!");
-                            window.location.href = "/html/trainer/home/clientlist.html";
+                            //window.location.href = "/html/trainer/home/clientlist.html";
                         } else {
                             alert(rs.msg);
                         }
