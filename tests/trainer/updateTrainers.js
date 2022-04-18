@@ -1,5 +1,5 @@
 var app = new Vue({
-    el: '#app',
+    el: '#updatetrainer',
     
     methods: {
         async update_trainers() {
@@ -20,7 +20,7 @@ var app = new Vue({
                     data: data,
                     contentType: "application/json",
                     success: function(rs) {
-                        this_.trainer_details(rs.id);
+                        this_.trainer_details(rs.id, rs.token);
                     },
                     error: function(rs, e) {
                         console.log(rs, e);
@@ -30,7 +30,7 @@ var app = new Vue({
             };
         },
 
-        trainer_details(id) {
+        trainer_details(id, token) {
             var details = {};
             details.training_style = "Yoga";
             details.description = "Trainer description. This is a test run. Some more text in here would help. My name is Peter Parker, and with great power comes great responsibility.";
@@ -45,7 +45,7 @@ var app = new Vue({
         
             $.ajax({
                 headers: {
-                    Authorization: "Bearer " + localStorage.getItem("token")
+                    Authorization: "Bearer " + token
                 },
                 url: "http://127.0.0.1:8000/api/users/trainers/update/" + id + "/",
                 type: "PUT",

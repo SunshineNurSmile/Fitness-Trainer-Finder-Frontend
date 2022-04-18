@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #90b4c0;
+}
+
+.back-div {
+    height: 60px;
+    background-color: #395b64;
+    padding-left: 30px;
+    padding-top: 20px;
+    position: absolute;
+}
+
+.back-button {
+    height: 30px;
+    width: 30px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 8vh;
+    background: #395b64;
+    color: white;
+}
+
+.profile-image {
+    width: 5vh;
+    height: 5vh;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.img {
+    width: 5vh;
+    height: 5vh;
+    background-color: #90b4c0;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 4vh;
+    position: absolute; 
+    bottom: 4px;
+}
+
+#message-input {
+    padding: 5px;
+    width: 100%;
+    border: 2px solid #fbd6d2;
+    border-radius: 8px;
+}
+
+#message-input:focus {
+    outline: none !important;
+}
+
+#send-btn {
+    width: 26vw;
+    height: auto;
+    background-color: #fbd6d2;
+    border: none;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-radius: 8px;
+}
+
+.message.right {
+    height: auto;
+    padding: 0.8rem;
+    width: 50vw;
+    margin-left: calc(50vw - 1rem);
+    margin-top: 1rem;
+    margin-right: 1rem;
+    color: black;
+    background-color: #fbd6d2;
+    text-align: end;
+    border-radius: 10px 10px 0px 10px;
+}
+
+.message.left {
+    height: auto;
+    padding: 0.8rem;
+    width: 50vw;
+    margin-right: calc(50vw - 1rem);
+    margin-top: 1rem;
+    margin-left: 1rem;
+    color: black;
+    background-color: #fbd6d2;
+    border-radius: 10px 10px 10px 0px;
+}

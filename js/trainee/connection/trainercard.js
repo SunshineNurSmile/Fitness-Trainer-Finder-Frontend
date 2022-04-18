@@ -18,7 +18,6 @@ var app = new Vue({
         img4: '',
         img5: '',
         img6: '',
-        
     },
 
     created: function() {
@@ -50,6 +49,9 @@ var app = new Vue({
                     if (rs != null) {
                         alert("Chat Request Has Been Sent!");
                     }
+                },
+                error: function(rs) {
+                    alert("You have already sent a request to this trainer.");
                 }
             })
         },

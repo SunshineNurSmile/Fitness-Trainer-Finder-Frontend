@@ -1,5 +1,5 @@
 var app = new Vue({
-    el: '#app',
+    el: '#updatepayment',
     
     methods: {
         async update_payment_info() {

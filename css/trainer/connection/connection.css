@@ -59,7 +59,7 @@ body {
 }
 
 .iframe_div {
-    margin-top: 35vh;
+    margin-top: 26vh;
     width: 100vw;
     height: 65vh;
 }
@@ -75,7 +75,6 @@ iframe {
     width: 38vw;
     margin-top: 1vh;
     margin-left: 2vw;
-    /* background-color: lightgray; */
     border-radius: 10px;
     position: absolute;
     z-index: 4;

@@ -42,14 +42,14 @@ button {
     margin-top: 22.5vh;
     background-color: white;
     width: 90vw;
-    height: 30vh;
+    height: auto;
     position: absolute;
     border-radius: 20px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .bio-text {
-    margin: 10px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -64,7 +64,7 @@ button {
 }
 
 .about-text {
-    margin: 0 30px 0 30px;
+    margin: 0 30px 20px 30px;
 }
 
 .bottom-container {

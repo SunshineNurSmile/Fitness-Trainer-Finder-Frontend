@@ -21,15 +21,32 @@ var app = new Vue({
 
                 success: function(rs) {
                     if (rs != null) {
-                        console.log(rs);
                         this_.information = rs;
                     }
                 },
             })
         },
 
-        start_chat(id) {
+        async start_chat(id, avatar, name) {
+            var timer = ms => new Promise(res => setTimeout(res, ms));
+            window.localStorage.setItem('avatar', avatar);
+            window.localStorage.setItem('name', name);
+            $.ajax({
+                headers: {
+                    Authorization: "Bearer " + localStorage.getItem("token"),
+                },
+                url: "http://127.0.0.1:8000/api/users/trainers/" + id + "/",
+                type: "GET",
 
+                success: function(rs) {
+                    if (rs != null) {
+                        console.log(rs);
+                        window.localStorage.setItem('receiver', rs.user_id);
+                    }
+                },
+            });
+            await timer (50);
+            window.parent.frames.location.href = '/html/trainee/connection/chatEnv.html';
         }
     }
 })
