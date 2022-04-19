@@ -18,11 +18,11 @@
                 <div class="info">
                     <h2>{{item.name}}</h2>
 
-                    <button class="accept-button" @click="acceptChat(item.trainee)">
+                    <button class="accept-button" @click="acceptChat(item._id)">
                         <h4>Accept</h4>
                     </button>
 
-                    <button class="delete-button" @click="deleteRequest(item.trainee)"><h4>Delete</h4></button>
+                    <button class="delete-button" @click="deleteRequest(item._id)"><h4>Delete</h4></button>
                 </div>
             </div>
         </div>
