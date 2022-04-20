@@ -5,7 +5,7 @@ var app = new Vue({
         async create_notifications() {
             var this_ = this;
             var timer = ms => new Promise(res => setTimeout(res, ms));
-            for (var index = 51; index <= 100; index++) {
+            for (var index = 51; index <= 60; index++) {
                 var email = index + "@gmail.com";
                 var password = "123456789";
                 var datas = {};
@@ -21,15 +21,15 @@ var app = new Vue({
                     contentType: "application/json",
                     success: function(rs) {
                         this_.create_request("1", rs.token);
-                        // this_.create_request("2", rs.token);
-                        // this_.create_request("3", rs.token);
-                        // this_.create_request("4", rs.token);
-                        // this_.create_request("5", rs.token);
-                        // this_.create_request("6", rs.token);
-                        // this_.create_request("7", rs.token);
-                        // this_.create_request("8", rs.token);
-                        // this_.create_request("9", rs.token);
-                        // this_.create_request("10", rs.token);
+                        this_.create_request("2", rs.token);
+                        this_.create_request("3", rs.token);
+                        this_.create_request("4", rs.token);
+                        this_.create_request("5", rs.token);
+                        this_.create_request("6", rs.token);
+                        this_.create_request("7", rs.token);
+                        this_.create_request("8", rs.token);
+                        this_.create_request("9", rs.token);
+                        this_.create_request("10", rs.token);
                     },
                     error: function(rs, e) {
                         console.log(rs, e);
