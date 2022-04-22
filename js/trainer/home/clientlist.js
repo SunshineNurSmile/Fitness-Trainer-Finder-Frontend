@@ -18,15 +18,40 @@ var app = new Vue({
                 type: "GET",
 
                 success: function(rs) {
-                    if (rs != null) {
+                    if (rs.length != 0) {
                         console.log(rs);
                         this_.information = rs;
                     }
-                    
+                    else {
+                        alert("You don't have any clients yet.");
+                    }
                 },
-                error: function() {}
+                error: function(rs) {
+                    alert("You don't have any clients yet.");
+                }
             })
-        }
+        },
 
+        async send_message(id, avatar, name) {
+            var timer = ms => new Promise(res => setTimeout(res, ms));
+            window.localStorage.setItem('avatar', avatar);
+            window.localStorage.setItem('name', name);
+            $.ajax({
+                headers: {
+                    Authorization: "Bearer " + localStorage.getItem("token"),
+                },
+                url: "http://127.0.0.1:8000/api/users/trainees/" + id + "/",
+                type: "GET",
+
+                success: function(rs) {
+                    if (rs != null) {
+                        console.log(rs);
+                        window.localStorage.setItem('receiver', rs.user);
+                    }
+                },
+            });
+            await timer(50);
+            window.parent.frames.location.href = '/html/trainer/connection/chatEnv.html';
+        }
     }
 })

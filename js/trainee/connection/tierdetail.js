@@ -12,7 +12,6 @@ Vue.component("app", {
     computed: {
         createOrder: function () {
             var price = window.localStorage.getItem('price');
-            console.log(price);
             return (data, actions) => {
                 return actions.order.create({
                     purchase_units: [

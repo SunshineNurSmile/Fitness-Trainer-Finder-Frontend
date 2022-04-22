@@ -42,8 +42,7 @@
 
             <div class="sticky">
                 <div class="top-container">
-                    <h1>Hayley Kim</h1>
-                    <h3>ID: ABC12345</h3>
+                    <h1>{{ name }}</h1>
                 </div>
     
                 <div class="centerize-earning">
@@ -54,7 +53,7 @@
     
                         <div class="earning-amount">
                             <div class="earning-rectangle">
-                                <h1>$2,000</h1>
+                                <h1>${{ total }}</h1>
                             </div>
                         </div>
                     </div>
@@ -62,18 +61,23 @@
             </div>
     
             <div class="receipt-container">
-                <div class="receipt-box">
+                <div class="receipt-box" v-for="(item, index) in information" :key="index">
                     <div class="receipt-id">
-                        <h3>Receipt 1:</h3>
+                        <h3>Receipt {{ index + 1 }}:</h3>
+                        <h5>ID: {{ item.orderID }}</h5>
                     </div>
     
                     <div class="receipt-amount">
-                        <h3>$500</h3>
+                        <h3>{{ item.totalPrice }}</h3>
+                        <h5>{{ item.createdAt.substring(0, 10) }}</h5>
                     </div>
                 </div>
             </div>
         </div>
 
+        <script src="/js/jquery.js"></script>
+        <script src="/js/vue.js"></script>
+        <script src="/js/trainer/connection/receipt.js"></script>
         <script src="/js/nav.js"></script>
     </body>
 </html>

@@ -24,6 +24,10 @@ var app = new Vue({
                         this_.information = rs;
                     }
                 },
+                error: function(rs) {
+                    alert("Please send chat requests to trainers in your home page. If you have already done so, wait for them to accept your requests.");
+                    window.frames.parent.location.href = '/html/trainee/home/homepage.html';
+                }
             })
         },
 
