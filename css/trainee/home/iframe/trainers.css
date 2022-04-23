@@ -21,15 +21,14 @@ body {
     background-color: white;
     border-top: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
-    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
 .profile-image {
-    width: 11vh;
-    height: 11vh;
+    width: 14vh;
+    height: 14vh;
     background-color: #90b4c0;
     object-fit: cover;
     border-radius: 50%;

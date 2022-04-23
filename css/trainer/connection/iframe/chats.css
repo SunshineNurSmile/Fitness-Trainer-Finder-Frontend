@@ -11,12 +11,11 @@ body {
 }
 
 .profile-list {
-    height: 18vh;
+    height: 20vh;
     width: 100%;
     background-color: white;
     border-top: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
-    border-radius: 10px;
     position: relative;
     z-index: 3;
     display: flex;

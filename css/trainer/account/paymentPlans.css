@@ -100,3 +100,7 @@ button {
     font-size: 90%;
     font-style: normal;
 }
+
+.margin {
+    margin-top: 6rem;
+}

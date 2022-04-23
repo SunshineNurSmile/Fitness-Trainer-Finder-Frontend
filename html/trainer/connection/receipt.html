@@ -64,12 +64,12 @@
                 <div class="receipt-box" v-for="(item, index) in information" :key="index">
                     <div class="receipt-id">
                         <h3>Receipt {{ index + 1 }}:</h3>
-                        <h5>ID: {{ item.orderID }}</h5>
+                        <h6>ID: {{ item.orderID }}</h6>
+                        <h6>Date: {{ item.createdAt.substring(0, 10) }}</h6>
                     </div>
     
                     <div class="receipt-amount">
-                        <h3>{{ item.totalPrice }}</h3>
-                        <h5>{{ item.createdAt.substring(0, 10) }}</h5>
+                        <h3>${{ item.totalPrice }}</h3>
                     </div>
                 </div>
             </div>

@@ -37,7 +37,6 @@ body {
 .client-container {
     width: 100vw;
     height: 15vh;
-    border-radius: 10px;
     z-index: 1;
     background-color: white;
     display: flex;

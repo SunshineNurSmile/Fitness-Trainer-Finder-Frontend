@@ -69,7 +69,8 @@ body {
 
 .selection:focus {
     outline: none !important;
-    background-color: #f5989d;
+    background-color: white;
+    color: black;
 }
 
 .input {

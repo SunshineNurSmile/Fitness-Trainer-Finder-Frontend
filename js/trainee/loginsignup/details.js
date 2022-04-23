@@ -1,22 +1,37 @@
 var app = new Vue({
     el: '#app',
     data: {
-        gender: '',
         weight: '',
         heightft: '',
         heightin: '',
-        dob: ''
+        dob: '',
+
+        MaleTF: false,
+        FemaleTF: false,
     },
     
     methods: {
         jump_to_AT(){
-            if (this.gender == ''||this.weight == ''||this.heightft == '' ||this.heightin == '' ||this.dob == '') {
-                alert("The information cannot be empty");
+            if (this.weight == ''||this.heightft == '' ||this.heightin == '' ||this.dob == '') {
+                alert("The information cannot be empty.");
                 window.location.reload();
             }
-            else{
+            if (this.heightft < 3 || this.heightft > 7) {
+                alert("You must enter a valid height.");
+                window.location.reload();
+            }
+            if (this.heightin < 0 || this.heightft > 12) {
+                alert("You must enter a valid height.");
+                window.location.reload();
+            }
+            else{                
                 var datas = {};
-                datas.gender = this.gender;
+                if (this.MaleTF == true) {
+                    datas.gender = 'Male';
+                }
+                else {
+                    datas.gender = 'Female';
+                }
                 datas.weight = this.weight;
                 datas.heightft = this.heightft;
                 datas.heightin = this.heightin;

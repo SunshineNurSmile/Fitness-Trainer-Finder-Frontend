@@ -56,21 +56,20 @@
                         <h3><b>About</b></h3>
                         <h3>{{ description }}</h3>
                     </div>
-                </div>
-    
-                <div class="bottom-container">
-                    <video class="video" controls>
-                        <source v-if="videourl" :src="videourl" type="video/mp4">
-                    </video>
-    
-                    <div class="trainer-images">
-                        <!-- add photos here -->
-                        <img :src="img1"/>
-                        <img :src="img2"/>
-                        <img :src="img3"/>
-                        <img :src="img4"/>
-                        <img :src="img5"/>
-                        <img :src="img6"/>
+
+                    <div class="bottom-container">
+                        <video class="video" controls>
+                            <source v-if="videourl" :src="videourl" type="video/mp4">
+                        </video>
+                        
+                        <div class="trainer-images">
+                            <img :src="img1"/>
+                            <img :src="img2"/>
+                            <img :src="img3"/>
+                            <img :src="img4"/>
+                            <img :src="img5"/>
+                            <img :src="img6"/>
+                        </div>
                     </div>
                 </div>
             </div>

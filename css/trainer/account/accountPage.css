@@ -68,7 +68,6 @@ button {
 }
 
 .bottom-container {
-    margin-top: 55vh;
     position: absolute;
     width: 90vw;
     padding-bottom: 100px;
@@ -90,6 +89,7 @@ button {
 }
 
 .video {
+    margin-top: 2rem;
     width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;

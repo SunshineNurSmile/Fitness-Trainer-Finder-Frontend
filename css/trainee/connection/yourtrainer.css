@@ -48,8 +48,8 @@ button {
 
 .bio-box {
     background-color: white;
-    width: 90vw;
-    height: 36vh;
+    width: 100%;
+    height: auto;
     border-radius: 20px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
@@ -71,7 +71,7 @@ button {
 
 .about-text {
     width: 100%;
-    height: 19vh;
+    height: auto;
     padding-left: 1rem;
     padding-right: 1rem;
 }
@@ -113,7 +113,10 @@ button {
     border-radius: 15px;
     margin: 5px 0 5px 0;
     object-fit: cover;
+}
 
+.margin {
+    margin-bottom: 6rem;
 }
 
 .video {
@@ -130,11 +133,7 @@ video {
     margin-bottom: 1rem;
 }
 
-.payment-button {
-    width: 60vw;
-    height: 3rem;
-    border: none;
-    border-radius: 10px;
-    background-color: #f5989d;
-    font-size: 15px;
+.payment-tier h3 {
+    color: white;
+    letter-spacing: 2px;
 }

@@ -77,8 +77,9 @@ body {
 }
 
 .selection:focus {
+    color: black;
     outline: none !important;
-    background-color: #f5989d;
+    background-color: #fbd6d2;
 }
 
 .input {

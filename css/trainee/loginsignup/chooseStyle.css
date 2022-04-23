@@ -77,6 +77,11 @@ body {
     letter-spacing: 2px;
 }
 
+.body-chooseStyle button:focus {
+    color: #f5989d;
+    border-color: #f5989d;
+}
+
 .body-chooseStyle h1 {
     font-size: 30px;
     text-align: center;

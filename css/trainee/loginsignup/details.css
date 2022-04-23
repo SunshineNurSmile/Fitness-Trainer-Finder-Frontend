@@ -46,7 +46,7 @@ body {
     position: relative;
 }
 
-.gender-button {
+.male-button, .female-button {
     width: 9em;
     border-radius: 8px;
     border: 1px solid white;
@@ -59,12 +59,6 @@ body {
     margin: 4px 2px;
     cursor: pointer;
     background-color: transparent;
-}
-
-.gender-button:focus {
-    border-color: #f5989d;
-    color: #f5989d;
-    font-weight: 300;
 }
 
 .details-page h1 {

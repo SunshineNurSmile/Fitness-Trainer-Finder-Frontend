@@ -22,9 +22,6 @@ body {
 .box-account {
     height: 80vh;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
 
 .top-account {
@@ -42,6 +39,7 @@ body {
     justify-content: space-between;
     padding: 0 20px;
     margin: 0 20px;
+    margin-top: 2rem;
 }
 
 .info-columns-2 {
@@ -57,14 +55,19 @@ body {
     align-items: center;
     padding: 5px 20px;
     margin: 0 20px;
+    margin-top: 1rem;
 }
 
 .cropped1 {
-    width: 150px;
-    height: 150px;
+    width: 20vh;
+    height: 20vh;
     object-fit: cover;
     border: 2px solid #f5989d;
     border-radius: 50%;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
     text-align: center;
+}
+
+.margin {
+    padding-bottom: 6rem;
 }

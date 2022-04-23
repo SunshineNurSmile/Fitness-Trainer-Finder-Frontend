@@ -42,7 +42,7 @@ body {
 
 .earning-container {
     margin-top: 16vh;
-    width: 330px;
+    width: 80vw;
     height: 15vh;
     border-radius: 10px;
     position: absolute;
@@ -53,21 +53,21 @@ body {
 }
 
 .earning-text {
-    width: 175px;
+    width: 40vw;
     display: flex;
     align-items: center;
     padding-left: 20px;
 }
 
 .earning-amount {
-    width: 155px;
+    width: 40vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .earning-rectangle {
-    width: 140px;
+    width: 30vw;
     height: 13vh;
     background-color: lightgray;
     border-radius: 12px;
@@ -82,7 +82,7 @@ body {
 }
 
 .receipt-container {
-    margin-top: 37vh;
+    margin-top: 32vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,8 +92,8 @@ body {
 .receipt-box {
     background-color: white;
     margin: 10px;
-    width: 330px;
-    height: 10vh;
+    width: 90vw;
+    height: 12vh;
     border-radius: 10px;
     display: flex;
     align-items: center;

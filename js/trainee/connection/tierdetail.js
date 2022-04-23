@@ -44,7 +44,8 @@ Vue.component("app", {
         onError: function () {
             return (err) => {
                 console.error(err);
-                window.location.href = "/your-error-page-here";
+                alert("There is a problem processing your order.");
+                window.location.href = "/html/trainee/home/homepage.html";
             }
         },
 
@@ -63,10 +64,6 @@ Vue.component("app", {
 var this_;
 const vm = new Vue({
     el: "#container",
-
-    data: {
-        price: '12.99'
-    },
     
     mounted: function() {
         this_ = this;
@@ -91,7 +88,7 @@ const vm = new Vue({
             if (orderID != null) {
                 await timer(2000);
                 this.send_orderID(orderID);
-            }
+            };
         },
 
         send_orderID(orderID) {
@@ -118,9 +115,9 @@ const vm = new Vue({
                 },
 
                 error: function(rs) {
-                    alert("Could not process your order.");
+                    alert("Your order went through, but we could not store your order information.");
                 }
-            })
+            });
         }
     }
 });

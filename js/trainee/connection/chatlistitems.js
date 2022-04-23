@@ -20,8 +20,13 @@ var app = new Vue({
                 type: "GET",
 
                 success: function(rs) {
-                    if (rs != null) {
+                    if (rs != '') {
+                        console.log(rs);
                         this_.information = rs;
+                    }
+                    else {
+                        alert("Please send chat requests to trainers in your home page. If you have already done so, wait for them to accept your requests.");
+                        window.frames.parent.location.href = '/html/trainee/home/homepage.html';
                     }
                 },
                 error: function(rs) {

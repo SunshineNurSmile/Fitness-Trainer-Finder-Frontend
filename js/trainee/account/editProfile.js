@@ -37,9 +37,6 @@ var app = new Vue({
                         if (rs.trainee.description != null) {
                             this_.description = rs.trainee.description;
                         }
-                        else {
-                            this_.description = "Please edit your description here!";
-                        }
 
                         if (rs.trainee.avatar != null) {
                             this_.avatar = rs.trainee.avatar;

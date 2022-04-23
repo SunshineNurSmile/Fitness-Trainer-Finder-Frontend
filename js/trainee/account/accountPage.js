@@ -33,7 +33,7 @@ var app = new Vue({
                         this_.height = rs.trainee.heightft + "\'" + rs.trainee.heightin + "\"";
 
                         // Get Description
-                        if (rs.trainee.description != null) {
+                        if (rs.trainee.description != '' && rs.trainee.description != null) {
                             this_.description = rs.trainee.description;
                         }
 

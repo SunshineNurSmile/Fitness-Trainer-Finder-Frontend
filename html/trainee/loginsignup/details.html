@@ -12,9 +12,9 @@
         <div class="box-details" id="app">
             <div class="body-details">
                 <h1>Your details</h1>
-                <div>
-                    <button class="gender-button" @click="gender = 'Male' ">Male</button>
-                    <button class="gender-button" @click="gender = 'Female' ">Female</button>
+                <div class="buttons">
+                    <button class="male-button" @click="MaleTF = true; FemaleTF = false;" v-bind:style="MaleTF ? 'color: #f5989d; border-color: #f5989d': 'color: white; border-color: white;' ">Male</button>
+                    <button class="female-button" @click="MaleTF = false; FemaleTF = true;" v-bind:style="FemaleTF ? 'color: #f5989d; border-color: #f5989d': 'color: white; border-color: white;' ">Female</button>
                 </div>
 
                 <form>

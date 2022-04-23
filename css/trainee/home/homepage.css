@@ -28,7 +28,7 @@ body {
 .button-container {
     display: flex;
     justify-content: center;
-    padding: 1em;
+    padding: 0rem 2rem 0rem 2rem;
     height: 5vh;
 }
 
@@ -36,20 +36,15 @@ body {
     background-color: white;
     width: 100%;
     border: 0;
+    border-radius: 8px;
 }
-/* 
-.button-container button:focus {
-    background-color: #f5989d;
-    color: white;
-    border: 0;
-} */
 
 iframe {
-    height: 65vh;
+    height: 60vh;
     width: 90vw;
     border-radius: 8px;
     border: 0px;
-    margin-top: 20px;
+    margin-top: 1rem;
 }
 
 .iframe_div {

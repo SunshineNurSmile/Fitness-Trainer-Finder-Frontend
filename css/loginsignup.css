@@ -62,15 +62,6 @@ label {
     width: 100%;
 }
 
-.forgot-div {
-    color: white;
-    display: flex;
-    justify-content: flex-end;
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 2px;
-}
-
 .login-button-div {
     text-align: center;
     width: auto;
