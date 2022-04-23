@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/trainee/connection/tierdetail.css">
-    <title>Document</title>
-</head>
-<body>
-    <div id="container">
-        <div class="payment-container">
-            <h2>{{ name }}</h2>
-
-            <div class="pricing">
-                <h1>&nbsp; ${{ price }}</h1>
-                <p>&nbsp; {{ duration }}</p>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/trainee/connection/tierdetail.css">
+        <title>Document</title>
+    </head>
+    
+    <body>
+        <div id="container">
+            <div class="back-div">
+                <img class="back-button" src="/images/back-trainee.png" alt="back button" @click="back()">
+            </div>
+            
+            <div class="top-container">
+                <h1>Payment</h1>
             </div>
 
-            <div class="tier-info">
-                {{ description }}
+            <div class="bottom-container">
+                <div class="payment-container">
+                    <h2>{{ name }}</h2>
+        
+                    <div class="pricing">
+                        <h1>&nbsp; ${{ price }}</h1>
+                        <p>&nbsp; {{ duration }}</p>
+        
+                    </div>
+        
+                    <div class="tier-info">
+                        {{ description }}
+                    </div>
+                </div>
+        
+                <div class="paypal">
+                    <app></app>
+                </div>
+        
+                <div class="notification">
+                    <h3>You will be redirected after 4 seconds of payment.</h3>
+                </div>
             </div>
         </div>
 
-        <div>
-            <app></app>
-        </div>
-    </div>
-
-    <script src="https://www.paypal.com/sdk/js?client-id=ATjFXH8Qrbs7nNa8DeP3ge5WN35tEP6qkE-Rv5xeFrlz95ZeRtpFq8B3j3NXq0J0tS0AKSZAS_Y1msMh
-    "></script>
-    <script src="/js/vue.js"></script>
-    <script src="/js/jquery.js"></script>
-    <script src="/js/trainee/connection/tierdetail.js"></script>
-</body>
+        <script src="https://www.paypal.com/sdk/js?client-id=ATjFXH8Qrbs7nNa8DeP3ge5WN35tEP6qkE-Rv5xeFrlz95ZeRtpFq8B3j3NXq0J0tS0AKSZAS_Y1msMh
+        "></script>
+        <script src="/js/vue.js"></script>
+        <script src="/js/jquery.js"></script>
+        <script src="/js/trainee/connection/tierdetail.js"></script>
+    </body>
 </html>

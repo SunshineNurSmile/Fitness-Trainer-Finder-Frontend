@@ -154,6 +154,10 @@ const vm = new Vue({
                     alert("Your order went through, but we could not store your order information.");
                 }
             });
+        },
+
+        back() {
+            window.location.href = '/html/trainee/connection/plantiers.html?trainer_id=' + window.localStorage.getItem('trainer_id');
         }
     }
 });

@@ -12,22 +12,48 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     height: -webkit-fill-available;
-    background-color: #90b4c0;
+    background-color: #395b64;
+}
+
+.back-div {
+    height: 60px;
+    background-color: #395b64;
+    padding-left: 30px;
+    padding-top: 30px;
+    position: absolute;
+}
+
+.back-button {
+    height: 30px;
+    width: 30px;
+}
+
+.top-container {
+    height: 26vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-container h1 {
+    color: white;
+    transform: scale(1.2, 1.2);
+}
+
+.bottom-container {
     padding: 1rem;
 }
 
 .payment-container {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     padding: 10px 20px;
-    margin-top: 20px;
-    width: 80vw;
+    width: auto;
     height: auto;
     color: black;
     border-radius: 10px;
     background-color: white;
-    border: 2px solid white;
-    z-index: 2;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .pricing {
@@ -40,4 +66,15 @@ body {
     padding-bottom: 10px;
     font-size: 0.9rem;
     font-weight: 200;
+}
+
+.notification {
+    text-align: center;
+    color: lightgray;
+    font-size: 0.6rem;
+    font-weight: 100;
+}
+
+.paypal {
+    text-align: center;
 }

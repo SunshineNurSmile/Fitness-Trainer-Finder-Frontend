@@ -34,6 +34,10 @@ body {
     margin-top: 1rem;
 }
 
+.padding {
+    padding-bottom: 6rem;
+}
+
 .client-container {
     width: 100vw;
     height: 15vh;
