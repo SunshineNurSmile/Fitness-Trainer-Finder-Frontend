@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/trainee/connection/tierdetail.css">
     <title>Document</title>
 </head>
 <body>
     <div id="container">
-        
-        <app></app>
+        <div class="payment-container">
+            <h2>{{ name }}</h2>
+
+            <div class="pricing">
+                <h1>&nbsp; ${{ price }}</h1>
+                <p>&nbsp; {{ duration }}</p>
+
+            </div>
+
+            <div class="tier-info">
+                {{ description }}
+            </div>
+        </div>
+
+        <div>
+            <app></app>
+        </div>
     </div>
 
     <script src="https://www.paypal.com/sdk/js?client-id=ATjFXH8Qrbs7nNa8DeP3ge5WN35tEP6qkE-Rv5xeFrlz95ZeRtpFq8B3j3NXq0J0tS0AKSZAS_Y1msMh

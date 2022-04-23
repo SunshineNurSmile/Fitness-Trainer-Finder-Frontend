@@ -64,13 +64,48 @@ Vue.component("app", {
 var this_;
 const vm = new Vue({
     el: "#container",
+    data: {
+        price: '',
+        description: '',
+        name: '',
+        duration: '',
+    },
     
     mounted: function() {
         this_ = this;
+        this_.get_tier_info()
         this_.get_orderID();
     },
 
     methods: {
+        get_tier_info () {
+            this_ = this;
+            this.price = window.localStorage.getItem('price');
+            this.description = window.localStorage.getItem('description');
+            if (this.price != '0.00') {
+                this.duration = 'per month';
+            }
+            else {
+                this.duration = 'one week';
+            }
+
+            $.ajax({
+                headers: {
+                    Authorization: "Bearer " + localStorage.getItem("token")
+                },
+                url: "http://127.0.0.1:8000/api/users/trainers/" + window.localStorage.getItem('trainer_id') + "/",
+                type: "GET",
+
+                success: function(rs) {
+                    this_.name = rs.name;
+                },
+
+                error: function(rs) {
+                    alert("Error getting trainer's name.");
+                }
+            });
+        },
+
         async get_orderID() {
             var timer = ms => new Promise(res => setTimeout(res, ms));
             var keeplooping = true;
@@ -111,6 +146,7 @@ const vm = new Vue({
                 contentType: "application/json; charset=utf_8",
 
                 success: function(rs) {
+                    window.localStorage.removeItem('orderID');
                     window.location.href = '/html/trainee/connection/paymentThankyou.html';
                 },
 

@@ -3,7 +3,7 @@ var app = new Vue({
     el: '#app',
     data: {
         name: '',
-        total: '',
+        total: '0.00',
         information:[]
     },
     created: function() {
@@ -38,10 +38,9 @@ var app = new Vue({
 
                 success: function(rs) {
                     if (rs != null) {
-                        console.log(rs);
                         this_.information = rs;
                         for (var index = 0; index < this_.information.length; index++) {
-                            this_.total = this_.total + this_.information[index].totalPrice;
+                            this_.total = parseFloat(this_.total) + parseFloat(this_.information[index].totalPrice);
                         }
                     }
                 },

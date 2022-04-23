@@ -16,11 +16,11 @@ var app = new Vue({
                 alert("The information cannot be empty.");
                 window.location.reload();
             }
-            if (this.heightft < 3 || this.heightft > 7) {
+            else if (this.heightft < 3 || this.heightft > 7) {
                 alert("You must enter a valid height.");
                 window.location.reload();
             }
-            if (this.heightin < 0 || this.heightft > 12) {
+            else if (this.heightin < 0 || this.heightft > 11) {
                 alert("You must enter a valid height.");
                 window.location.reload();
             }

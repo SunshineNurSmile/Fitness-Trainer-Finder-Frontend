@@ -59,8 +59,9 @@ var app = new Vue({
             })
         },
 
-        jump_to_pp(price) {
+        jump_to_pp(price, description) {
             window.localStorage.setItem('price', price);
+            window.localStorage.setItem('description', description);
             window.localStorage.setItem('trainer_id', this.trainer_id);
             window.location.href = '/html/trainee/connection/tierdetail.html';
         },
