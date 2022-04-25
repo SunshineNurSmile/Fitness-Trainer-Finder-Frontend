@@ -13,7 +13,7 @@ var app = new Vue({
                 var data = JSON.stringify(datas);
 
                 $.ajax({
-                    url: "http://127.0.0.1:8000/api/users/register/",
+                    url: "http://3.83.93.2:8000/api/users/register/",
                     type: "post",
                     dataType: "json",
                     data: data,
@@ -36,7 +36,7 @@ var app = new Vue({
                 datas.password = "123456789";
                 var data = JSON.stringify(datas);
                 $.ajax({
-                    url: "http://127.0.0.1:8000/api/users/register/",
+                    url: "http://3.83.93.2:8000/api/users/register/",
                     type: "post",
                     dataType: "json",
                     data: data,

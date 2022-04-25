@@ -14,7 +14,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token"),
                 },
-                url: "http://127.0.0.1:8000/api/users/trainers/list",
+                url: "http://3.83.93.2:8000/api/users/trainers/list",
                 type: "GET",
 
                 success: function(rs) {

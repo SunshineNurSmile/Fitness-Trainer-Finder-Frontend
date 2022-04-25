@@ -39,7 +39,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: "http://127.0.0.1:8000/api/users/trainees/createnote/",
+                url: "http://3.83.93.2:8000/api/users/trainees/createnote/",
                 type: "POST",
                 data: data,
                 dataType: "json",
@@ -77,7 +77,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: "http://127.0.0.1:8000/api/users/trainers/file/" + this.trainer_id + "/",
+                url: "http://3.83.93.2:8000/api/users/trainers/file/" + this.trainer_id + "/",
                 type: "GET",
                 
                 success: function(rs) {
@@ -93,7 +93,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: "http://127.0.0.1:8000/api/users/trainers/" + this.trainer_id + "/",
+                url: "http://3.83.93.2:8000/api/users/trainers/" + this.trainer_id + "/",
                 type: "GET",
                 
                 success: function(rs) {

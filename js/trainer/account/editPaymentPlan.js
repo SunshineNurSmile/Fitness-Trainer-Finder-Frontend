@@ -26,7 +26,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: "http://127.0.0.1:8000/api/users/trainers/payment/get/",
+                url: "http://3.83.93.2:8000/api/users/trainers/payment/get/",
                 type: "GET",
                 
                 success: function(rs) {
@@ -62,7 +62,7 @@ var app = new Vue({
                     headers: {
                         Authorization: "Bearer " + localStorage.getItem("token")
                     },
-                    url: "http://127.0.0.1:8000/api/users/trainers/payment/create/",
+                    url: "http://3.83.93.2:8000/api/users/trainers/payment/create/",
                     type: "POST",
                     data: data,
                     dataType: "json",
@@ -83,7 +83,7 @@ var app = new Vue({
                     headers: {
                         Authorization: "Bearer " + localStorage.getItem("token")
                     },
-                    url: "http://127.0.0.1:8000/api/users/trainers/payment/update/",
+                    url: "http://3.83.93.2:8000/api/users/trainers/payment/update/",
                     type: "PUT",
                     data: data,
                     dataType: "json",

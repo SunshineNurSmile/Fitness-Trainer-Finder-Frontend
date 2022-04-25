@@ -14,7 +14,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token"),
                 },
-                url: "http://127.0.0.1:8000/api/users/trainers/chat/get/",
+                url: "http://3.83.93.2:8000/api/users/trainers/chat/get/",
                 type: "GET",
 
                 success: function(rs) {
@@ -33,7 +33,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token"),
                 },
-                url: "http://127.0.0.1:8000/api/users/trainees/" + id + "/",
+                url: "http://3.83.93.2:8000/api/users/trainees/" + id + "/",
                 type: "GET",
 
                 success: function(rs) {
