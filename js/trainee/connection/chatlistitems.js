@@ -54,7 +54,7 @@ var app = new Vue({
                     }
                 },
             });
-            await timer (50);
+            await timer (200);
             window.parent.frames.location.href = '/html/trainee/connection/chatEnv.html';
         }
     }

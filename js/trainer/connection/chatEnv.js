@@ -17,7 +17,7 @@ var app = new Vue({
 
     mounted: function() {
         this_ = this;
-        setInterval(this_.get_all_messages, 1000);
+        setInterval(this_.get_all_messages, 2000);
     },
     
     methods: {
