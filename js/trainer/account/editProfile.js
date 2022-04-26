@@ -28,7 +28,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: "http://3.83.93.2:8000/api/users/trainers/",
+                url: "http://34.201.24.7/api/users/trainers/",
                 type: "GET",
                 
                 success: function(rs) {
@@ -181,7 +181,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: 'http://3.83.93.2:8000/api/users/trainers/uploadFile',
+                url: 'http://34.201.24.7/api/users/trainers/uploadFile',
                 type: 'POST',
                 dataType: 'JSON',
                 cache: false,
@@ -219,7 +219,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: "http://3.83.93.2:8000/api/users/trainers/update/" + this.id + "/",
+                url: "http://34.201.24.7/api/users/trainers/update/" + this.id + "/",
                 type: "PUT",
                 data: data,
                 dataType: "json",

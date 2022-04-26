@@ -36,7 +36,7 @@ var app = new Vue({
             console.log(data);
 
             $.ajax({
-                url: "http://3.83.93.2:8000/api/users/register/",
+                url: "http://34.201.24.7/api/users/register/",
                 type: "post",
                 dataType: "json",
                 data: data,

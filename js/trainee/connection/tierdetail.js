@@ -93,7 +93,7 @@ const vm = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: "http://3.83.93.2:8000/api/users/trainers/" + window.localStorage.getItem('trainer_id') + "/",
+                url: "http://34.201.24.7/api/users/trainers/" + window.localStorage.getItem('trainer_id') + "/",
                 type: "GET",
 
                 success: function(rs) {
@@ -117,11 +117,11 @@ const vm = new Vue({
                 else {
                     keeplooping = true;
                 }
-                await timer(2000);
+                await timer(3000);
             };
             
             if (orderID != null) {
-                await timer(2000);
+                await timer(3000);
                 this.send_orderID(orderID);
             };
         },
@@ -139,7 +139,7 @@ const vm = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: "http://3.83.93.2:8000/api/orders/create/",
+                url: "http://34.201.24.7/api/orders/create/",
                 type: "POST",
                 data: data,
                 dataType: "json",

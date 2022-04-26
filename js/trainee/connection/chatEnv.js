@@ -17,7 +17,7 @@ var app = new Vue({
 
     mounted: function() {
         this_ = this;
-        setInterval(this_.get_all_messages, 2000);
+        setInterval(this_.get_all_messages, 5000);
     },
     
     methods: {
@@ -32,7 +32,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: "http://3.83.93.2:8000/api/messages/list/" + this_.receiver + "/",
+                url: "http://34.201.24.7/api/messages/list/" + this_.receiver + "/",
                 type: "GET",
 
                 success: function(rs) {
@@ -57,7 +57,7 @@ var app = new Vue({
                     headers: {
                         Authorization: "Bearer " + localStorage.getItem("token")
                     },
-                    url: "http://3.83.93.2:8000/api/messages/create/",
+                    url: "http://34.201.24.7/api/messages/create/",
                     type: "POST",
                     data: data,
                     dataType: "json",
@@ -65,6 +65,7 @@ var app = new Vue({
     
                     success: function(rs) {
                         this_.message = '';
+                        this_.get_all_messages();
                     },
     
                     error: function(rs) {

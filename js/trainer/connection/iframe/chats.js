@@ -14,7 +14,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token"),
                 },
-                url: "http://3.83.93.2:8000/api/users/trainers/chat/get/",
+                url: "http://34.201.24.7/api/users/trainers/chat/get/",
                 type: "GET",
 
                 success: function(rs) {
@@ -33,7 +33,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token"),
                 },
-                url: "http://3.83.93.2:8000/api/users/trainees/" + id + "/",
+                url: "http://34.201.24.7/api/users/trainees/" + id + "/",
                 type: "GET",
 
                 success: function(rs) {
@@ -43,8 +43,10 @@ var app = new Vue({
                     }
                 },
             });
-            await timer(200);
-            window.parent.frames.location.href = '/html/trainer/connection/chatEnv.html';
+            await timer(500);
+            if (window.localStorage.getItem('receiver') != null || window.localStorage.getItem('receiver') != '') {
+                window.parent.frames.location.href = '/html/trainer/connection/chatEnv.html';
+            }
         }
     }
 })
