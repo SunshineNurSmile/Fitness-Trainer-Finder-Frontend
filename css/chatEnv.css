@@ -91,7 +91,9 @@ body {
 }
 
 .messages {
-    height: calc(100% - 100px);
+    margin-top: 60px;
+    margin-bottom: 50px;
+    height: calc(100% - 110px);
     box-sizing: border-box;
     overflow-y: scroll;
 }
