@@ -16,7 +16,6 @@ var app = new Vue({
             data_l.username = this.email;
             data_l.password = this.password;
             var formData = JSON.stringify(data_l);
-            console.log(data_l);
 
             if (this.trainer == true) {
                 $.ajax({
@@ -26,25 +25,14 @@ var app = new Vue({
                     data: formData,
                     contentType: "application/json",
                     success: function(rs) {
-                        console.log(rs);
                         this_ = this;
                         if (rs != null) {
-                            console.log(rs);
                             window.localStorage.setItem('token', rs.token);
                             alert("Login successful!");
                             window.location.href = "/html/trainer/connection/connection.html";
                         } else {
                             alert(rs.msg);
                         }
-                        // if (rs.code == "0") {
-                        // 	console.log(rs);
-                        //     window.localStorage.setItem('refreshToken', rs.refresh);
-                        //     window.localStorage.setItem('accessToken', rs.access);
-                        // 	alert("Login successful!");
-                        // 	window.location.href = "index_page.html";
-                        // } else {
-                        // 	alert(rs.msg);
-                        // }
                     },
                     error: function(rs, e) {
                         console.error(rs.status);
@@ -61,10 +49,8 @@ var app = new Vue({
                     data: formData,
                     contentType: "application/json",
                     success: function(rs) {
-                        console.log(rs);
                         this_ = this;
                         if (rs != null) {
-                            console.log(rs);
                             window.localStorage.setItem('token', rs.token);
                             alert("Login successful!");
                             window.location.href = "/html/trainee/home/homepage.html";

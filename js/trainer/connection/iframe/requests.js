@@ -19,7 +19,6 @@ var app = new Vue({
 
                 success: function(rs) {
                     if (rs != null) {
-                        console.log(rs);
                         this_.information = rs;
                     }
                     

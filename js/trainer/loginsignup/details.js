@@ -18,7 +18,6 @@ var app = new Vue({
                 datas.gender = this.gender;
                 datas.dob = this.dob;
                 var data = JSON.stringify(datas);
-                console.log(datas);
                 
                 $.ajax({
                     headers: {

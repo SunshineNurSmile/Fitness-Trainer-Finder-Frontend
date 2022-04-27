@@ -25,7 +25,6 @@ var app = new Vue({
                 type: "GET",
                 
                 success: function(rs) {
-                    console.log(rs);
                     if (rs != null) {                        
                         this_.price2 = rs.price2;
                         this_.price3 = rs.price3;

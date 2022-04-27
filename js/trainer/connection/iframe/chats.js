@@ -38,7 +38,6 @@ var app = new Vue({
 
                 success: function(rs) {
                     if (rs != null) {
-                        console.log(rs);
                         window.localStorage.setItem('receiver', rs.user);
                     }
                 },

@@ -33,7 +33,6 @@ var app = new Vue({
             datas.trainer_id = this_.trainer_id;
             
             var data = JSON.stringify(datas);
-            console.log(data);
 
             $.ajax({
                 headers: {
@@ -97,7 +96,6 @@ var app = new Vue({
                 type: "GET",
                 
                 success: function(rs) {
-                    console.log(rs);
                     if (rs != null) {
                         this_.name = rs.name;
                         this_.style = rs.training_style;

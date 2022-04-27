@@ -37,7 +37,6 @@ var app = new Vue({
 
                 success: function(rs) {
                     this_.messages = rs;
-                    console.log(rs);
                 },
 
                 error: function(rs) {

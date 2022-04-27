@@ -33,7 +33,6 @@ var app = new Vue({
             datas.email = this.email;
             datas.password = this.password;
             var data = JSON.stringify(datas);
-            console.log(data);
 
             $.ajax({
                 url: "http://34.201.24.7/api/users/register/",
@@ -42,7 +41,6 @@ var app = new Vue({
                 data: data,
                 contentType: "application/json",
                 success: function(rs) {
-                    console.log(rs);
                     window.localStorage.setItem('token', rs.token);
                     alert("Registration successful!");
                     window.location.href = "/html/trainer/loginsignup/details.html";

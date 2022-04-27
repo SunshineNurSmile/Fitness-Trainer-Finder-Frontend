@@ -21,7 +21,6 @@ var app = new Vue({
 
                 success: function(rs) {
                     if (rs != '') {
-                        console.log(rs);
                         this_.information = rs;
                     }
                     else {
@@ -49,7 +48,6 @@ var app = new Vue({
 
                 success: function(rs) {
                     if (rs != null) {
-                        console.log(rs);
                         window.localStorage.setItem('receiver', rs.user_id);
                     }
                 },
