@@ -22,6 +22,7 @@ body {
     padding-left: 30px;
     padding-top: 20px;
     position: absolute;
+    z-index: 2;
 }
 
 .back-button {
@@ -35,21 +36,22 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 8vh;
+    height: 60px;
     background: #395b64;
     color: white;
+    z-index: 2;
 }
 
 .profile-image {
-    width: 5vh;
-    height: 5vh;
+    width: 40px;
+    height: 40px;
     object-fit: cover;
     margin-right: 20px;
 }
 
 .img {
-    width: 5vh;
-    height: 5vh;
+    width: 40px;
+    height: 40px;
     background-color: #90b4c0;
     object-fit: cover;
     border-radius: 50%;
@@ -60,9 +62,10 @@ body {
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    height: 4vh;
+    height: 40px;
     position: absolute; 
     bottom: 4px;
+    z-index: 2;
 }
 
 #message-input {
@@ -84,6 +87,13 @@ body {
     margin-left: 2px;
     margin-right: 2px;
     border-radius: 8px;
+}
+
+.messages {
+    height: auto;
+    position: absolute;
+    margin-top: 60px;
+    margin-bottom: 44px;
 }
 
 .message.right {

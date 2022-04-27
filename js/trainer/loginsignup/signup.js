@@ -22,7 +22,7 @@ var app = new Vue({
             }
 
             if (this.password.length < 8) {
-                alert("Please enter a stronger password");
+                alert("Password length cannot be less than 8.");
                 location.reload();
                 return;
             }

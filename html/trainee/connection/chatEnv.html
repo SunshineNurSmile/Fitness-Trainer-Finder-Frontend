@@ -22,8 +22,10 @@
                 <h3>{{ name }}</h3>
             </div>
 
-            <div :class="item.isSender? 'message right' : 'message left'" v-for="(item, index) in messages" :key="index">
-                {{ item.message }}
+            <div class="messages">
+                <div :class="item.isSender? 'message right' : 'message left'" v-for="(item, index) in messages" :key="index">
+                    {{ item.message }}
+                </div>
             </div>
 
             <div class="input-area">

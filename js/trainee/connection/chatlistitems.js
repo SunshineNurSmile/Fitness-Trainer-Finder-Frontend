@@ -54,8 +54,10 @@ var app = new Vue({
                     }
                 },
             });
-            await timer (200);
-            window.parent.frames.location.href = '/html/trainee/connection/chatEnv.html';
+            await timer (500);
+            if (window.localStorage.getItem('receiver') != null || window.localStorage.getItem('receiver') != '') {
+                window.parent.frames.location.href = '/html/trainee/connection/chatEnv.html';
+            }
         }
     }
 })
