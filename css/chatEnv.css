@@ -21,7 +21,6 @@ body {
     background-color: #395b64;
     padding-left: 30px;
     padding-top: 20px;
-    position: absolute;
     z-index: 2;
 }
 
@@ -40,7 +39,6 @@ body {
     background: #395b64;
     color: white;
     z-index: 2;
-    position: fixed;
 }
 
 .profile-image {
@@ -64,8 +62,6 @@ body {
     justify-content: center;
     width: 100%;
     height: 40px;
-    position: absolute;
-    bottom: 0px;
     z-index: 2;
 }
 
@@ -92,8 +88,7 @@ body {
 
 .messages {
     margin-top: 60px;
-    margin-bottom: 50px;
-    height: calc(100% - 110px);
+    height: calc(100% - 100px);
     box-sizing: border-box;
     overflow-y: scroll;
 }
