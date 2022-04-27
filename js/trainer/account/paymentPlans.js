@@ -21,7 +21,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: "http://35.227.26.131/api/users/trainers/payment/get/",
+                url: "http://35.227.26.131:8000/api/users/trainers/payment/get/",
                 type: "GET",
                 
                 success: function(rs) {

@@ -19,7 +19,7 @@ var app = new Vue({
 
             if (this.trainer == true) {
                 $.ajax({
-                    url: "http://35.227.26.131/api/users/login/",
+                    url: "http://35.227.26.131:8000/api/users/login/",
                     type: "post",
                     dataType: "json",
                     data: formData,
@@ -43,7 +43,7 @@ var app = new Vue({
             }
             else {
                 $.ajax({
-                    url: "http://35.227.26.131/api/users/login/",
+                    url: "http://35.227.26.131:8000/api/users/login/",
                     type: "post",
                     dataType: "json",
                     data: formData,
