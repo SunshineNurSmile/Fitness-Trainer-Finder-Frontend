@@ -10,16 +10,16 @@
 </head>
 
     <body>
-        <div class="body" id="app">
-            <div class="back-div">
-                <img class="back-button" src="/images/back-trainer.png" alt="back button" @click="back()">
-            </div>
-
+        <div class="all" id="app">
             <div class="header">
+                <div class="back-div">
+                    <img class="back-button" src="/images/back-trainee.png" alt="back button" @click="back()">
+                </div>
+
                 <div class="profile-image">
                     <img class="img" :src="avatar" alt="Avatar"/>
-                 </div>
-                <h3>{{ name }}</h3>
+                    <div class="name">{{ name }}</div>
+                </div>
             </div>
 
             <div class="messages">

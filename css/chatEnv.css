@@ -16,11 +16,15 @@ body {
     background-color: #90b4c0;
 }
 
+.all {
+    height: 100vh;
+    width: 100vw;
+}
+
 .back-div {
-    height: 60px;
+    height: auto;
     background-color: #395b64;
     padding-left: 30px;
-    padding-top: 20px;
     z-index: 2;
 }
 
@@ -32,7 +36,6 @@ body {
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     width: 100%;
     height: 60px;
@@ -42,10 +45,18 @@ body {
 }
 
 .profile-image {
-    width: 40px;
-    height: 40px;
+    margin-left: 16vw;
+    width: auto;
+    height: auto;
     object-fit: cover;
     margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.name {
+    margin-left: 1rem;
 }
 
 .img {
@@ -62,6 +73,8 @@ body {
     justify-content: center;
     width: 100%;
     height: 40px;
+    position: absolute;
+    bottom: 0px;
     z-index: 2;
 }
 
@@ -87,7 +100,6 @@ body {
 }
 
 .messages {
-    margin-top: 60px;
     height: calc(100% - 100px);
     box-sizing: border-box;
     overflow-y: scroll;
