@@ -90,10 +90,9 @@ body {
 }
 
 .messages {
-    height: auto;
-    position: absolute;
-    margin-top: 60px;
-    margin-bottom: 44px;
+    height: calc(100% - 104px);
+    position: fixed;
+    box-sizing: border-box;
 }
 
 .message.right {

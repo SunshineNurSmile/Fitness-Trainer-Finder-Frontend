@@ -55,7 +55,7 @@ var app = new Vue({
                 },
             });
             await timer (500);
-            if (window.localStorage.getItem('receiver') != null || window.localStorage.getItem('receiver') != '') {
+            if (window.localStorage.getItem('receiver') != null && window.localStorage.getItem('receiver') != '') {
                 window.parent.frames.location.href = '/html/trainee/connection/chatEnv.html';
             }
         }
