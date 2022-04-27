@@ -35,7 +35,7 @@ var app = new Vue({
             var data = JSON.stringify(datas);
 
             $.ajax({
-                url: "http://34.201.24.7/api/users/register/",
+                url: "http://35.227.26.131/api/users/register/",
                 type: "post",
                 dataType: "json",
                 data: data,

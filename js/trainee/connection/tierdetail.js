@@ -93,7 +93,7 @@ const vm = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: "http://34.201.24.7/api/users/trainers/" + window.localStorage.getItem('trainer_id') + "/",
+                url: "http://35.227.26.131/api/users/trainers/" + window.localStorage.getItem('trainer_id') + "/",
                 type: "GET",
 
                 success: function(rs) {
@@ -139,7 +139,7 @@ const vm = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: "http://34.201.24.7/api/orders/create/",
+                url: "http://35.227.26.131/api/orders/create/",
                 type: "POST",
                 data: data,
                 dataType: "json",

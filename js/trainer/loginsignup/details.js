@@ -23,7 +23,7 @@ var app = new Vue({
                     headers: {
                         Authorization: "Bearer " + localStorage.getItem("token")
                     },
-                    url: "http://34.201.24.7/api/users/trainers/create",
+                    url: "http://35.227.26.131/api/users/trainers/create",
                     type: "POST",
                     dataType: "json",
                     data: data,

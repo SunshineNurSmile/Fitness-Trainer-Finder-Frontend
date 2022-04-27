@@ -32,7 +32,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: "http://34.201.24.7/api/messages/list/" + this_.receiver + "/",
+                url: "http://35.227.26.131/api/messages/list/" + this_.receiver + "/",
                 type: "GET",
 
                 success: function(rs) {
@@ -56,7 +56,7 @@ var app = new Vue({
                     headers: {
                         Authorization: "Bearer " + localStorage.getItem("token")
                     },
-                    url: "http://34.201.24.7/api/messages/create/",
+                    url: "http://35.227.26.131/api/messages/create/",
                     type: "POST",
                     data: data,
                     dataType: "json",

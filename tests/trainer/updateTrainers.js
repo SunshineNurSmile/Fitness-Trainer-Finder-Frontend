@@ -14,7 +14,7 @@ var app = new Vue({
                 var data = JSON.stringify(datas);
 
                 $.ajax({
-                    url: "http://34.201.24.7/api/users/login/",
+                    url: "http://35.227.26.131/api/users/login/",
                     type: "post",
                     dataType: "json",
                     data: data,
@@ -47,7 +47,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + token
                 },
-                url: "http://34.201.24.7/api/users/trainers/update/" + id + "/",
+                url: "http://35.227.26.131/api/users/trainers/update/" + id + "/",
                 type: "PUT",
                 data: detail,
                 dataType: "json",
