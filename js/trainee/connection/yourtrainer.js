@@ -35,7 +35,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: "http://35.227.26.131:8000/api/users/trainees/mytrainer/",
+                url: "http://10.142.0.2:8000/api/users/trainees/mytrainer/",
                 type: "GET",
                 
                 success: function(rs) {
@@ -69,7 +69,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token"),
                 },
-                url: "http://35.227.26.131:8000/api/orders/myorders/",
+                url: "http://10.142.0.2:8000/api/orders/myorders/",
                 type: "GET",
 
                 success: function(rs) {
@@ -95,7 +95,7 @@ var app = new Vue({
                 headers: {
                     Authorization: "Bearer " + localStorage.getItem("token")
                 },
-                url: "http://35.227.26.131:8000/api/users/trainers/file/" + id + "/",
+                url: "http://10.142.0.2:8000/api/users/trainers/file/" + id + "/",
                 type: "GET",
                 
                 success: function(rs) {
