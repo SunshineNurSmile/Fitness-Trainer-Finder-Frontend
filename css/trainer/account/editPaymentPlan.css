@@ -58,7 +58,7 @@ body {
     padding: 10px 20px;
     margin-top: 20px;
     width: 90vw;
-    height: 35vh;
+    height: auto;
     color: black;
     border-radius: 10px;
     background-color: white;
