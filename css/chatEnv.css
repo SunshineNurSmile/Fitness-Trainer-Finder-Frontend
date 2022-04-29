@@ -102,7 +102,7 @@ body {
 }
 
 .messages {
-    height: calc(80% - 100px);
+    height: calc(90% - 100px);
     box-sizing: border-box;
     overflow-y: scroll;
 }
