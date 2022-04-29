@@ -11,6 +11,7 @@ var app = new Vue({
 
     created: function() {
         this_ = this;
+        receiver = this_.getRequest('trainee_user_id');
         this_.get_receiver_info();
         this_.get_all_messages();
     },
@@ -21,6 +22,22 @@ var app = new Vue({
     },
     
     methods: {
+        getRequest(name) {
+            var url = location.search;
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            if (!theRequest[name]) {
+                theRequest[name] = null;
+            }
+            return theRequest[name]
+        },
+
         get_receiver_info() {
             this_.receiver = localStorage.getItem("receiver");
             this_.name = localStorage.getItem("name");

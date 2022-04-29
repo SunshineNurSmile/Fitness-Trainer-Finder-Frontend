@@ -107,10 +107,9 @@ var app = new Vue({
         },
 
         start_chat() {
-            window.localStorage.setItem('receiver', this.trainer_id);
             window.localStorage.setItem('avatar', this.avatar);
             window.localStorage.setItem('name', this.name);
-            window.location.href = '/html/trainee/connection/chatEnv.html';
+            window.location.href = '/html/trainee/connection/chatEnv.html?trainer_user_id=' + this.trainer_id;
         }
     }
 })

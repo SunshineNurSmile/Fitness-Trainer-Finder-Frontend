@@ -25,8 +25,7 @@ var app = new Vue({
             })
         },
 
-        async start_Chat(id, avatar, name) {
-            var timer = ms => new Promise(res => setTimeout(res, ms));
+        start_Chat(id, avatar, name) {
             window.localStorage.setItem('avatar', avatar);
             window.localStorage.setItem('name', name);
             $.ajax({
@@ -38,14 +37,10 @@ var app = new Vue({
 
                 success: function(rs) {
                     if (rs != null) {
-                        window.localStorage.setItem('receiver', rs.user);
+                        window.parent.frames.location.href = '/html/trainer/connection/chatEnv.html?trainee_user_id=' + rs.user;
                     }
                 },
             });
-            await timer(500);
-            if (window.localStorage.getItem('receiver') != null && window.localStorage.getItem('receiver') != '') {
-                window.parent.frames.location.href = '/html/trainer/connection/chatEnv.html';
-            }
         }
     }
 })
