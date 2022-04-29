@@ -95,16 +95,7 @@ input:focus {
 .tier-info {
     margin-top: 1rem;
     text-align: center;
-}
-
-.tier-info p {
-    font-size: 90%;
-    font-style: normal;
-    margin-top: 1rem;
-}
-
-.tier-info i {
-    color: #395b64;
+    height: auto;
 }
 
 textarea {
