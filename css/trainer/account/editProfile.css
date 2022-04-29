@@ -16,7 +16,7 @@ body {
 
 .top-container {
 	width: 100vw;
-	height: 60vh;
+	height: auto;
 	background-color: #395b64;
 	text-align: center;
 	padding: 10px;
@@ -62,6 +62,7 @@ body {
 
 .text-description {
 	margin-top: 2rem;
+	height: auto;
 }
 
 .margin {
