@@ -4,7 +4,7 @@ var app = new Vue({
 
     methods: {
         jump_to_signup(){
-            window.location.href='/html/trainee/home/homepage.html';
+            window.location.href='/html/trainee/account/editProfile.html';
         }
     }
 })

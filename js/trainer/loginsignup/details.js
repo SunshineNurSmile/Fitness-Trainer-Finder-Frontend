@@ -29,7 +29,7 @@ var app = new Vue({
                     data: data,
                     contentType: "application/json",
                     success: function(rs) {
-                        window.location.href = '/html/trainer/connection/connection.html';
+                        window.location.href = '/html/trainer/account/editProfile.html';
                     },
                     error: function(xhr, status, error){
                         var errorMessage = xhr.status + ': ' + xhr.statusText
