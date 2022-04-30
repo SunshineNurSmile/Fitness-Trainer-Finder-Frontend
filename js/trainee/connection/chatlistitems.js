@@ -47,7 +47,6 @@ var app = new Vue({
 
                 success: function(rs) {
                     if (rs != null) {
-                        // window.localStorage.setItem('receiver', rs.user_id);
                         window.parent.frames.location.href = '/html/trainee/connection/chatEnv.html?trainer_user_id=' + rs.user_id;
                     }
                 },

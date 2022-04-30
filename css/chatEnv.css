@@ -42,6 +42,8 @@ body {
     background: #395b64;
     color: white;
     z-index: 2;
+    position: absolute;
+    top: 0;
 }
 
 .profile-image {
@@ -102,9 +104,12 @@ body {
 }
 
 .messages {
-    height: calc(100% - 100px);
+    max-height: calc(100vh - 100px);
     box-sizing: border-box;
     overflow-y: scroll;
+    position: absolute;
+    top: 60px;
+    bottom: 40px;
 }
 
 .message.right {
