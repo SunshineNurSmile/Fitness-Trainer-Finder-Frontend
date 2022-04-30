@@ -44,14 +44,10 @@ var app = new Vue({
 
                 success: function(rs) {
                     if (rs != null) {
-                        window.localStorage.setItem('receiver', rs.user);
+                        window.parent.frames.location.href = '/html/trainer/connection/chatEnv.html?trainee_user_id=' + rs.user;
                     }
                 },
             });
-            await timer(500);
-            if (window.localStorage.getItem('receiver') != null && window.localStorage.getItem('receiver') != '') {
-                window.parent.frames.location.href = '/html/trainer/connection/chatEnv.html';
-            }
         }
     }
 })
