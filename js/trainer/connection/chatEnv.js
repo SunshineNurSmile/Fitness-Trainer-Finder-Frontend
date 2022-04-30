@@ -11,7 +11,7 @@ var app = new Vue({
 
     created: function() {
         this_ = this;
-        receiver = this_.getRequest('trainee_user_id');
+        this_.receiver = this_.getRequest('trainee_user_id');
         this_.get_receiver_info();
         this_.get_all_messages();
     },
@@ -26,7 +26,7 @@ var app = new Vue({
             var url = location.search;
             var theRequest = new Object();
             if (url.indexOf("?") != -1) {
-                var str = url.substr(1);
+                var str = url.substring(1);
                 strs = str.split("&");
                 for (var i = 0; i < strs.length; i++) {
                     theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
