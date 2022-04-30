@@ -39,7 +39,6 @@ var app = new Vue({
         },
 
         get_receiver_info() {
-            this_.receiver = localStorage.getItem("receiver");
             this_.name = localStorage.getItem("name");
             this_.avatar = localStorage.getItem("avatar");
         },
