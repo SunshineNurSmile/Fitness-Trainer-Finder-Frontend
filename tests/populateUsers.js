@@ -4,7 +4,7 @@ var app = new Vue({
     methods: {
         async populate_users() {
             var timer = ms => new Promise(res => setTimeout(res, ms));
-            for (var index = 1; index <= 50; index++) {
+            for (var index = 1; index <= 10; index++) {
                 var datas = {};
                 datas.first_name = "Trainer";
                 datas.last_name = index.toString();
@@ -28,7 +28,7 @@ var app = new Vue({
                 await timer(200);
             };
 
-            for (var index = 51; index <= 100; index++) {
+            for (var index = 11; index <= 20; index++) {
                 var datas = {};
                 datas.first_name = "Trainee";
                 datas.last_name = index.toString();

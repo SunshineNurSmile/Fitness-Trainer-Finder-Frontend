@@ -5,7 +5,7 @@ var app = new Vue({
         async update_payment_info() {
             var this_ = this;
             var timer = ms => new Promise(res => setTimeout(res, ms));
-            for (var index = 1; index <= 50; index++) {
+            for (var index = 1; index <= 10; index++) {
                 var email = index + "@gmail.com";
                 var password = "123456789";
                 var datas = {};

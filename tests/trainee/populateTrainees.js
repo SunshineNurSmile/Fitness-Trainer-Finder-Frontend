@@ -5,7 +5,7 @@ var app = new Vue({
         async populate_trainees() {
             var this_ = this;
             var timer = ms => new Promise(res => setTimeout(res, ms));
-            for (var index = 51; index <= 100; index++) {
+            for (var index = 11; index <= 20; index++) {
                 var email = index + "@gmail.com";
                 var password = "123456789";
                 var datas = {};
